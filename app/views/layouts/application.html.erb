@@ -10,8 +10,57 @@
   </head>
 
   <body>
+   <nav>
+    <div class="nav-wrapper grey darken-4">
+    <%= link_to image_tag('finden.png', width: 150, height: 60), class:'brand-logo'%>
+      <a href="#!" class="brand-logo"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">About us</a></li>
+        <li><a href="badges.html">FAQ</a></li>
+        <li><a href="collapsible.html">Contact</a></li>
+        <li><a href="mobile.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">About us</a></li>
+    <li><a href="badges.html">FAQ</a></li>
+    <li><a href="collapsible.html">Contact</a></li>
+    <li><a href="mobile.html">Login</a></li>
+  </ul>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
     <%= yield %>
+
+  <footer class="page-footer grey darken-4">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Footer Content</h5>
+        <p class="grey-text text-lighten-4">This is where the motto of finden will be</p>
+       <%= link_to image_tag('mh_logo.png', width: 100, height: 100), class:'brand-logo'%>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">more about us</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="#!">Especial visitation</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Become a Sponsor</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Our red</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 2018 all rights reserved
+    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>  
+</footer>
   </body>
+
 </html>
