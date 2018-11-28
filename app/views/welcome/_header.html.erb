@@ -7,7 +7,14 @@
       <li><a href="sass.html">About us</a></li>
       <li><a href="badges.html">FAQ</a></li>
       <li><a href="collapsible.html">Contact</a></li>
-      <li><a href="mobile.html">Login</a></li>
+      <% if user_signed_in? %>
+        <li><a>Logged in as <strong><%= current_user.email %></strong>.</li></a>
+        <li><a><%= link_to 'Edit profile', edit_user_registration_path, class: 'navbar-link' %> |</li></a>
+        <li><a><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'navbar-link'  %></li></a>
+      <% else %>
+        <li><a><%= link_to 'Sign up', new_user_registration_path, class: 'navbar-link'  %> |</li></a>
+        <li><a><%= link_to 'Login', new_user_session_path, class: 'navbar-link'  %></li></a>
+      <% end %>
     </ul>
   </div>
 </nav>
