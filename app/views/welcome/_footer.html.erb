@@ -2,16 +2,16 @@
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">Footer Content</h5>
-        <p class="grey-text text-lighten-4">This is where the motto of finden will be</p>
+        <h5 class="white-text"> <%= t('footer.content') %> </h5>
+        <p class="grey-text text-lighten-4"> <%= t('footer.motto') %> </p>
         <%= link_to image_tag('mh_logo.png', width: 100, height: 100), class: 'brand-logo' %>
       </div>
       <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">more about us</h5>
+        <h5 class="white-text"> <%= t('about_us') %> </h5>
         <ul>
-          <li><a class="grey-text text-lighten-3" href="#!">Especial visitation</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Become a Sponsor</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Our red</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!"> <%= t('footer.especial_visitation') %> </a></li>
+          <li><a class="grey-text text-lighten-3" href="#!"> <%= t('footer.sponsor') %> </a></li>
+          <li><a class="grey-text text-lighten-3" href="#!"> <%= t('footer.our_red') %> </a></li>
         </ul>
       </div>
     </div>
@@ -19,8 +19,8 @@
 
   <div class="footer-copyright">
       <div class="container">
-      © 2018 all rights reserved
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      <%= t('footer.rights') %>
+      <a class="grey-text text-lighten-4 right" href="#!"> <%= t('footer.more_links') %> </a>
     </div>
   </div>  
 </footer>

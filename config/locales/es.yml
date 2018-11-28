@@ -1,0 +1,20 @@
+es:
+  header:
+    menu: "Menú"
+    fqa: "Preguntas Frecuentes"
+    contact: "Contáctanos"
+    sign_up: "Regístrate"
+    log_in: "Iniciar Sesión"
+    edit_profile: "Mi Perfil"
+    sign_out: "Cerrar Sesión"
+
+  footer:
+    content: "Contenido del Footer"
+    motto: "Aquí es donde se encontrara el lema de Finden"
+    especial_visitation: "Visita especial"
+    sponsor: "Vuelvete un patrocinador"
+    our_red: "Nuestra red"
+    rights: "© 2018 Todos los derechos reservados"
+    more_links: "Más Links"
+
+  about_us: "Nosotros"
