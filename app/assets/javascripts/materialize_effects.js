@@ -1,4 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-});
+function setMaterialize(element, component, op) {
+    var elems = document.querySelectorAll(element);
+    var instances = M[component].init(elems, op);
+ }
+ 
+ document.addEventListener('DOMContentLoaded', function() {
+  setMaterialize('.slider', 'Slider', {});
+  setMaterialize('.sidenav', 'Sidenav', {});
+ }); 
