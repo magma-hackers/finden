@@ -4,6 +4,6 @@ function setMaterialize(element, component, op) {
  }
  
  document.addEventListener('DOMContentLoaded', function() {
-  setMaterialize('.slider', 'Slider', {});
-  setMaterialize('.sidenav', 'Sidenav', {});
+    setMaterialize('.slider', 'Slider', {});
+    setMaterialize('.sidenav', 'Sidenav', {});
  }); 
