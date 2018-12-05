@@ -1,12 +1,12 @@
 <nav>
   <div class="nav-wrapper grey darken-4">
-    <%= link_to image_tag('finden.png', width: 150, height: 60), class: 'brand-logo' %>
+    <%= link_to image_tag('finden.png', width: 120, height: 60 ), class: 'brand-logo' %>
     <a href="#!" class="brand-logo"></a>
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"> <%= t('header.menu') %> </i></a>
     <ul class="right hide-on-med-and-down">
-      <li><a href="sass.html"> <%= t('about_us') %> </a></li>
-      <li><a href="badges.html"> <%= t('header.fqa') %> </a></li>
-      <li><a href="collapsible.html"> <%= t('header.contact') %> </a></li>
+      <li><%= link_to "Acerca", pages_about_path %></li>
+      <li><%= link_to "Preguntas frecuentas", pages_faq_path %></li>
+      <li><%= link_to "Contacto", pages_contact_path %></a></li>
       <% if user_signed_in? %>
         <li><a>Logged in as <strong><%= current_user.email %></strong>.</li></a>
         <li><a><%= link_to t('header.edit_profile'), edit_user_registration_path, class: 'navbar-link' %> |</li></a>
@@ -20,8 +20,8 @@
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
-  <li><a href="sass.html">About us</a></li>
-  <li><a href="badges.html">FAQ</a></li>
+  <li><%= link_to "About", pages_about_path %></li>
+  <li><%= link_to "FAQ", pages_faq_path %></li>
   <li><a href="collapsible.html">Contact</a></li>
   <li><a href="mobile.html">Login</a></li>
 </ul>
