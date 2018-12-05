@@ -1,7 +1,8 @@
 es:
   header:
     menu: "Menú"
-    fqa: "Preguntas Frecuentes"
+    about_us: "Nosotros"
+    faq: "Preguntas Frecuentes"
     contact: "Contáctanos"
     sign_up: "Regístrate"
     log_in: "Iniciar Sesión"
