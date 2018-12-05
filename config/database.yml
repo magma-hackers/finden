@@ -79,7 +79,6 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: dbFinden_production
-  username: dbFinden
-  password: <%= ENV['APIFINDEN_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  
+  
