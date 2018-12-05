@@ -1,8 +1,9 @@
 en:
   header:
     menu: "Menu"
-    fqa: "FQA"
-    contact: "About Us"
+    about_us: "About us"
+    faq: "FAQ"
+    contact: "Contact us"
     sign_up: "Sign Up"
     log_in: "Log In"
     edit_profile: "Edit Profile"
