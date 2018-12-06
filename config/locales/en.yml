@@ -17,5 +17,11 @@ en:
     our_red: "Our Red"
     rights: "© 2018 all right reserved"
     more_links: "More Links"
+    about_us: "About Us"
 
-  about_us: "About Us"
+  about_page: 
+    title: "About us"
+    information: "Lorem ipsum..."
+  
+  banner:
+    title: "Finden"

@@ -17,5 +17,11 @@ es:
     our_red: "Nuestra red"
     rights: "© 2018 Todos los derechos reservados"
     more_links: "Más Links"
+    about_us: "Nosotros"
 
-  about_us: "Nosotros"
+  about_page: 
+    title: "Nosotros"
+    information: "Lorem ipsum..."
+
+  banner:
+    title: "Finden"
