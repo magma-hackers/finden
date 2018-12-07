@@ -31,5 +31,7 @@ module ApiFinden
         ENV[key.to_s] = value
       end if File.exist?(env_file)
     end
+    config.assets.fonts = true
+    config.assets.paths << Rails.root.join('/app/assets/fonts')
   end
 end
