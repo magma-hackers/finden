@@ -1,52 +1,55 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 @font-face {
   font-family: "Rubik";
-  src: url('/assets/Rubyk-Regular');
+  src: url('https://fonts.google.com/specimen/Rubik');
   font-size: 30px;
 }
 
-body{
+body {
   font-family: "Rubik", sans-serif;
 }
 
-nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i{
+nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   font-size: 33px;
 }
 
 nav .sidenav-trigger {
   float: right;
 }
-.main-navigation-logo{
+
+.main-navigation-logo {
   font-size: 64px;
   margin-left: 15px;
 }
-.logo-nav{
+
+.logo-nav {
   width: 90px;
 }
 
-nav ul a{
-font-size: 16px;
+nav ul a {
+  font-size: 16px;
 }
 
-nav ul a:hover{
+nav ul a:hover {
   color: #00e25a;
 }
 
-.sidenav{
+.sidenav {
   background-color: #212121;
 }
 
-.sidenav li > a{
+.sidenav li > a {
   color: white;
   font-size: 16px;
 }
 
-.sidenav li > a:hover{
+.sidenav li > a:hover {
   color: #00e25a;
 }
 
-.session-container{
+.session-container {
   margin-top: 30px;
 }
