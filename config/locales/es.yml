@@ -8,6 +8,7 @@ es:
     log_in: "Iniciar Sesión"
     edit_profile: "Mi Perfil"
     sign_out: "Cerrar Sesión"
+    logged_user: "Usuario"
 
   footer:
     content: "Contenido del Footer"

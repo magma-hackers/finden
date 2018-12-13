@@ -31,23 +31,23 @@ nav .sidenav-trigger {
 
 nav ul a {
   font-size: 16px;
-}
 
-nav ul a:hover {
-  color: #00e25a;
+  &:hover {
+  color: $font-hover;
+  }
 }
 
 .sidenav {
-  background-color: #212121;
+  background-color: $side-background;
 }
 
 .sidenav li > a {
-  color: white;
+  color: $side-font-color;
   font-size: 16px;
-}
 
-.sidenav li > a:hover {
-  color: #00e25a;
+  &:hover {
+  color: $font-hover;
+  }
 }
 
 .session-container {

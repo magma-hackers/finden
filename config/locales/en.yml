@@ -8,6 +8,7 @@ en:
     log_in: "Log In"
     edit_profile: "Edit Profile"
     sign_out: "Sign Out"
+    logged_user: "Logged as"
 
   footer:
     content: "Footer Content"
