@@ -1,12 +1,14 @@
 es:
   header:
     menu: "Menú"
-    fqa: "Preguntas Frecuentes"
+    about_us: "Nosotros"
+    faq: "Preguntas Frecuentes"
     contact: "Contáctanos"
     sign_up: "Regístrate"
     log_in: "Iniciar Sesión"
     edit_profile: "Mi Perfil"
     sign_out: "Cerrar Sesión"
+    logged_user: "Usuario"
 
   footer:
     content: "Contenido del Footer"
@@ -16,5 +18,11 @@ es:
     our_red: "Nuestra red"
     rights: "© 2018 Todos los derechos reservados"
     more_links: "Más Links"
+    about_us: "Nosotros"
 
-  about_us: "Nosotros"
+  about_page: 
+    title: "Nosotros"
+    information: "Lorem ipsum..."
+
+  banner:
+    title: "Finden"

@@ -1,12 +1,14 @@
 en:
   header:
     menu: "Menu"
-    fqa: "FQA"
-    contact: "About Us"
+    about_us: "About us"
+    faq: "FAQ"
+    contact: "Contact us"
     sign_up: "Sign Up"
     log_in: "Log In"
     edit_profile: "Edit Profile"
     sign_out: "Sign Out"
+    logged_user: "Logged as"
 
   footer:
     content: "Footer Content"
@@ -16,5 +18,11 @@ en:
     our_red: "Our Red"
     rights: "© 2018 all right reserved"
     more_links: "More Links"
+    about_us: "About Us"
 
-  about_us: "About Us"
+  about_page: 
+    title: "About us"
+    information: "Lorem ipsum..."
+  
+  banner:
+    title: "Finden"
