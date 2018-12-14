@@ -1,0 +1,32 @@
+<%= form_with(model: technique, local: true) do |form| %>
+  <% if technique.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(technique.errors.count, "errores") %><%= t('technique.error_message') %></h2>
+
+      <ul>
+      <% technique.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label t('technique.principal_position') %>
+    <%= form.text_field :principal_position %>
+  </div>
+
+  <div class="field">
+    <%= form.label t('technique.secondary_position') %>
+    <%= form.text_field :secondary_position %>
+  </div>
+
+  <div class="field">
+    <%= form.label t('technique.strong_foot') %>
+    <%= form.text_field :strong_foot %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit t('technique.send') %>
+  </div>
+<% end %>

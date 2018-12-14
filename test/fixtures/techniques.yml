@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  principal_position: MyString
+  secondary_position: MyString
+  strong_foot: MyString
+
+two:
+  principal_position: MyString
+  secondary_position: MyString
+  strong_foot: MyString
