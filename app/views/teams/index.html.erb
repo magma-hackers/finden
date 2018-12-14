@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t('team.teams') %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t('team.name') %></th>
+      <th><%= t('team.princial_position') %></th>
+      <th><%= t('team.start_date') %></th>
+      <th><%= t('team.end_date') %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><%= team.name %></td>
+        <td><%= team.principal_position %></td>
+        <td><%= team.start_date %></td>
+        <td><%= team.end_date %></td>
+        <td><%= link_to t('team.show'), team %></td>
+        <td><%= link_to t('team.edit'), edit_team_path(team) %></td>
+        <% if can? :destroy, team %>
+          <td><%= link_to t('team.destroy'), team, method: :delete, data: { confirm: t('team.alert_message') } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('team.new_team'), new_team_path %>
