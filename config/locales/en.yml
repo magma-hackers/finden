@@ -1,28 +1,61 @@
 en:
   header:
-    menu: "Menu"
-    about_us: "About us"
-    faq: "FAQ"
-    contact: "Contact us"
-    sign_up: "Sign Up"
-    log_in: "Log In"
-    edit_profile: "Edit Profile"
-    sign_out: "Sign Out"
-    logged_user: "Logged as"
+    menu: 'Menu'
+    about_us: 'About us'
+    faq: 'FAQ'
+    contact: 'Contact us'
+    sign_up: 'Sign Up'
+    log_in: 'Log In'
+    edit_profile: 'Edit Profile'
+    sign_out: 'Sign Out'
+    logged_user: 'Logged as'
 
   footer:
-    content: "Footer Content"
-    motto: "This is were the motto of Finden will be"
-    especial_visitation: "Especial Visitation"
-    sponsor: "Become a Sponsor"
-    our_red: "Our Red"
-    rights: "© 2018 all right reserved"
-    more_links: "More Links"
-    about_us: "About Us"
+    content: 'Footer Content'
+    motto: 'This is were the motto of Finden will be'
+    especial_visitation: 'Especial Visitation'
+    sponsor: 'Become a Sponsor'
+    our_red: 'Our Red'
+    rights: '© 2018 all right reserved'
+    more_links: 'More Links'
+    about_us: 'About Us'
 
   about_page: 
-    title: "About us"
-    information: "Lorem ipsum..."
+    title: 'About us'
+    information: 'Lorem ipsum...'
   
   banner:
-    title: "Finden"
+    title: 'Finden'
+
+  team: 
+    alert_message: 'Are you sure?'
+    back: 'Back'
+    destroy: 'Destroy'
+    edit: 'Edit'
+    edit_message: 'Edit Team'
+    end_date: 'End date'
+    forbidden_save: 'Prohibited this team from being saved:'
+    name: 'Name'
+    new_team: 'New Team'
+    principal_position: 'Principal position'
+    send_button: 'Send'
+    show: 'Show'
+    start_date: 'Start date'
+    team_created: 'Team was successfully created.'
+    team_destroy: 'Team was successfully destroyed.'
+    team_update: 'Team was successfully updated.'
+    teams: 'Teams'
+
+  activerecord:
+    errors:
+      models:
+        team:
+          attributes:
+            name:
+              blank: 'name is required'
+            principal_position:
+              blank: 'principal position is required'
+            start_date: 
+              blank: 'start date is required'
+            end_date: 
+              blank: 'end date is required'

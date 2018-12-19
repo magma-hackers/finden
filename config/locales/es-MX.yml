@@ -39,17 +39,17 @@ es-MX:
     failure:
       already_authenticated: Ya has iniciado sesión.
       inactive: Tu cuenta aún no ha sido activada.
-      invalid: "%{authentication_keys} o password inválido(s)"
+      invalid: '%{authentication_keys} o password inválido(s)'
       last_attempt: Tienes un intento más antes de que tu cuenta sea bloqueada.
       locked: Tu cuenta está bloqueada.
-      not_found_in_database: "%{authentication_keys} o password inválido(s)"
+      not_found_in_database: '%{authentication_keys} o password inválido(s)'
       timeout: Tu sesión expiró. Por favor, inicia sesión nuevamente para continuar.
       unauthenticated: Tienes que iniciar sesión o registrarte para poder continuar.
       unconfirmed: Tienes que confirmar tu cuenta para poder continuar.
     mailer:
       confirmation_instructions:
         action: Confirmar mi cuenta
-        greeting: "¡Te damos la bienvenida, %{recipient}!"
+        greeting: '¡Te damos la bienvenida, %{recipient}!'
         instruction: 'Se puede confirmar el correo electrónico de la cuenta a través de este enlace:'
         subject: Instrucciones de confirmación
       email_changed:
@@ -57,24 +57,24 @@ es-MX:
         message: Te estamos contactando para notificarte que tu email ha cambiado a %{email}
         subject: El email cambió
       password_change:
-        greeting: "¡Hola, %{recipient}!"
+        greeting: '¡Hola, %{recipient}!'
         message: Le estamos contactando para notificarle que su contraseña ha cambiado
         subject: Contraseña cambiada
       reset_password_instructions:
         action: Cambiar mi contraseña
-        greeting: "¡Hola, %{recipient}!"
+        greeting: '¡Hola, %{recipient}!'
         instruction: Alguien ha solicitado un enlace para cambiar su contraseña, lo que se puede realizar a través del siguiente enlace.
         instruction_2: Si usted no lo ha solicitado, por favor ignore este correo electrónico.
         instruction_3: Su contraseña no será cambiada hasta que usted acceda al enlace y cree una nueva contraseña.
         subject: Instrucciones de recuperación de contraseña
       unlock_instructions:
         action: Desbloquear mi cuenta
-        greeting: "¡Hola, %{recipient}!"
+        greeting: '¡Hola, %{recipient}!'
         instruction: 'Haga clic en el siguiente enlace para desbloquear su cuenta:'
         message: Su cuenta ha sido bloqueada debido a una cantidad excesiva de intentos fallidos para ingresar.
         subject: Instrucciones para desbloquear tu cuenta
     omniauth_callbacks:
-      failure: No has sido autorizado en la cuenta %{kind} porque "%{reason}".
+      failure: No has sido autorizado en la cuenta %{kind} porque '%{reason}'.
       success: Has sido autorizado exitosamente desde la cuenta de %{kind}.
     passwords:
       edit:
@@ -83,7 +83,7 @@ es-MX:
         confirm_new_password: Confirme la nueva contraseña
         new_password: Contraseña nueva
       new:
-        forgot_your_password: "¿Ha olvidado su contraseña?"
+        forgot_your_password: '¿Ha olvidado su contraseña?'
         send_me_reset_password_instructions: Enviarme instrucciones para restablecer la contraseña
       no_token: No puedes acceder a esta página si no es a través de un enlace para restablecer tu contraseña. Si has llegado hasta aquí desde el correo para restablecer tu contraseña, por favor asegúrate de que la URL introducida está completa.
       send_instructions: En unos minutos recibirás un correo con instrucciones sobre cómo restablecer tu contraseña.
@@ -91,9 +91,9 @@ es-MX:
       updated: Tu contraseña ha sido cambiada exitosamente. Ya puedes iniciar sesión.
       updated_not_active: Tu contraseña ha sido cambiada.
     registrations:
-      destroyed: "¡Adiós! Tu cuenta ha sido cancelada exitosamente. Esperamos verte pronto."
+      destroyed: '¡Adiós! Tu cuenta ha sido cancelada exitosamente. Esperamos verte pronto.'
       edit:
-        are_you_sure: "¿Está usted seguro?"
+        are_you_sure: '¿Está usted seguro?'
         cancel_my_account: Eliminar mi cuenta
         currently_waiting_confirmation_for_email: 'Actualmente esperando la confirmación de: %{email}'
         leave_blank_if_you_don_t_want_to_change_it: dejar en blanco si no desea cambiarlo
@@ -118,15 +118,15 @@ es-MX:
     shared:
       links:
         back: Regresar
-        didn_t_receive_confirmation_instructions: "¿No ha recibido las instrucciones de confirmación?"
-        didn_t_receive_unlock_instructions: "¿No ha recibido instrucciones para desbloquear su cuenta?"
-        forgot_your_password: "¿Ha olvidado su contraseña?"
+        didn_t_receive_confirmation_instructions: '¿No ha recibido las instrucciones de confirmación?'
+        didn_t_receive_unlock_instructions: '¿No ha recibido instrucciones para desbloquear su cuenta?'
+        forgot_your_password: '¿Ha olvidado su contraseña?'
         sign_in: Iniciar sesión
         sign_in_with_provider: Iniciar sesión con %{provider}
         sign_up: Registrarse
       minimum_password_length:
-        one: "(Mínimo %{count} caracter)"
-        other: "(Minimo %{count} caracteres)"
+        one: '(Mínimo %{count} caracter)'
+        other: '(Minimo %{count} caracteres)'
     unlocks:
       new:
         resend_unlock_instructions: Reenviar instrucciones para desbloquear la cuenta
@@ -142,4 +142,4 @@ es-MX:
       not_locked: no se encuentra bloqueada
       not_saved:
         one: 'Un error ocurrió al tratar de guardar %{resource}:'
-        other: "%{count} errores ocurrieron al tratar de guardar %{resource}:"
+        other: '%{count} errores ocurrieron al tratar de guardar %{resource}:'
