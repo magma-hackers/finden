@@ -64,6 +64,25 @@ es:
     show: 'Mostrar'
     update: 'Contractual fue actualizado exitosamente.'
 
+  technique: 
+    alert_message: '¿Estás seguro?'
+    back: 'Atrás'
+    button_new: 'Nueva técnica'
+    create_technique: 'Las técnicas fueron creadas existosamente'
+    delete_technique: 'Las técnicas fueron eliminadas existosamente'
+    destroy: 'Eliminar'
+    edit: 'Editar'
+    edit_technique: 'Editar técnicas' 
+    error_message: ' los siguientes campos no pueden estar vacios'
+    new_technique: 'Nuevos técnicas'
+    principal_position: 'Posición principal'
+    secondary_position: 'Posición secundaria'
+    send: 'Enviar'
+    show: 'Mostrar'
+    strong_foot: 'Pie fuerte'
+    technique: 'Técnicas'
+    update_technique: 'Las técnicas fueron actualizadas existosamente'
+
   activerecord:
     errors:
       models:
@@ -85,4 +104,12 @@ es:
               blank: 'El agente no debe estar en blanco'
             nui: 
               blank: 'El NUI no debe estar en blanco'
+        technique:
+          attributes:
+            principal_position:
+              blank: 'La posición principal no debe estar en blanco'
+            secondary_position:
+              blank: 'La posicion secundaria no debe estar en blanco'
+            strong_foot: 
+              blank: 'Tú pie fuerte no debe estar en blanco'
            

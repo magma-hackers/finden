@@ -62,6 +62,25 @@ en:
     save: 'Contractual was successfully created.'
     show: 'Show'
     update: 'Contractual was successfully updated.'
+  
+  technique: 
+    alert_message: 'Are you sure?'
+    back: 'back'
+    button_new: 'New technique'
+    create_technique: 'Technique was successfully created.'
+    delete_technique: 'Technique was successfully destroyed.'
+    destroy: 'Delete'
+    edit: 'Edit'
+    edit_technique: 'Edit techniques' 
+    error_message: 'prohibited this technique from being saved:'
+    new_technique: 'Nuevos techniques'
+    principal_position: 'Principal position'
+    secondary_position: 'Secondary position'
+    send: 'Send'
+    show: 'Show'
+    strong_foot: 'Strong foot'
+    technique: 'Technique'
+    update_technique: 'Technique was successfully updated.'
 
   activerecord:
     errors:
@@ -84,4 +103,11 @@ en:
               blank: 'agent is required'
             nui: 
               blank: 'nui is required'
-           
+        technique:
+          attributes:
+            principal_position:
+              blank: 'Principal position is required'
+            secondary_position:
+              blank: 'Secundary position is required'
+            strong_foot: 
+              blank: 'Strong foot is required'
