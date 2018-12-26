@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :viewers
   resources :visoria
+  get 'personal', to: 'personal#personal'
   get 'pages/contact'
   get 'pages/faq'
   get 'pages/about'
