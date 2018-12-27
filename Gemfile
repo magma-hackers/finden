@@ -22,6 +22,7 @@ gem 'materialize-sass'
 gem 'jquery-turbolinks'
 
 gem 'devise-i18n'
+gem 'cancancan'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

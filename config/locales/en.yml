@@ -30,6 +30,7 @@ en:
   team: 
     alert_message: 'Are you sure?'
     back: 'Back'
+    destroy: 'Destroy'
     button_destroy: 'Destroy'
     edit: 'Edit'
     edit_message: 'Edit Team'
@@ -81,7 +82,7 @@ en:
     strong_foot: 'Strong foot'
     technique: 'Technique'
     update_technique: 'Technique was successfully updated.'
-
+    
   activerecord:
     errors:
       models:
