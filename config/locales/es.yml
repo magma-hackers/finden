@@ -46,6 +46,43 @@ es:
     team_update: 'El equipo fue actualizado.'
     teams: 'Equipos'
 
+  contractual: 
+    agent: 'Agente'
+    alert_message: '¿Estás seguro?'
+    back: 'Atrás'
+    button_destroy: 'Eliminar'
+    button_send: 'Enviar'
+    contractual: 'Contractual'
+    destroy: 'Contractual fue eliminado exitosamente.'
+    edit: 'Editar'
+    edit_contractual: 'Editar contractual'
+    error_message: ' los siguientes campos no pueden estar vacios'
+    new_contractual: 'Nuevo contractual'
+    nui: 'NUI'
+    player_type: 'Tipo de jugador'
+    save: 'Contractual fue creado exitosamente.'
+    show: 'Mostrar'
+    update: 'Contractual fue actualizado exitosamente.'
+
+  technique: 
+    alert_message: '¿Estás seguro?'
+    back: 'Atrás'
+    button_new: 'Nueva técnica'
+    create_technique: 'Las técnicas fueron creadas existosamente'
+    delete_technique: 'Las técnicas fueron eliminadas existosamente'
+    destroy: 'Eliminar'
+    edit: 'Editar'
+    edit_technique: 'Editar técnicas' 
+    error_message: ' los siguientes campos no pueden estar vacios'
+    new_technique: 'Nuevos técnicas'
+    principal_position: 'Posición principal'
+    secondary_position: 'Posición secundaria'
+    send: 'Enviar'
+    show: 'Mostrar'
+    strong_foot: 'Pie fuerte'
+    technique: 'Técnicas'
+    update_technique: 'Las técnicas fueron actualizadas existosamente'
+
   activerecord:
     errors:
       models:
@@ -59,3 +96,20 @@ es:
               blank: 'La fecha inicial no debe estar en blanco'
             end_date: 
               blank: 'La fecha de término no debe estar en blanco'
+        contractual:
+          attributes:
+            player_type:
+              blank: 'El tipo de jugador no debe estar en blanco'
+            agent:
+              blank: 'El agente no debe estar en blanco'
+            nui: 
+              blank: 'El NUI no debe estar en blanco'
+        technique:
+          attributes:
+            principal_position:
+              blank: 'La posición principal no debe estar en blanco'
+            secondary_position:
+              blank: 'La posicion secundaria no debe estar en blanco'
+            strong_foot: 
+              blank: 'Tú pie fuerte no debe estar en blanco'
+           

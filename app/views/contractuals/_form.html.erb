@@ -1,0 +1,32 @@
+<%= form_with(model: contractual, local: true) do |form| %>
+  <% if contractual.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contractual.errors.count, "errores") %><%=  t('contractual.error_message') %></h2>
+
+      <ul>
+      <% contractual.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label t('contractual.player_type') %>
+    <%= form.text_field :player_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label t('contractual.agent') %>
+    <%= form.text_field :agent %>
+  </div>
+
+  <div class="field">
+    <%= form.label t('contractual.nui') %>
+    <%= form.text_field :nui %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit t('contractual.button_send') %>
+  </div>
+<% end %>

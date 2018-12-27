@@ -31,6 +31,7 @@ en:
     alert_message: 'Are you sure?'
     back: 'Back'
     destroy: 'Destroy'
+    button_destroy: 'Destroy'
     edit: 'Edit'
     edit_message: 'Edit Team'
     end_date: 'End date'
@@ -45,7 +46,43 @@ en:
     team_destroy: 'Team was successfully destroyed.'
     team_update: 'Team was successfully updated.'
     teams: 'Teams'
-
+  
+  contractual: 
+    agent: 'Agent'
+    alert_message: 'Are you sure?'
+    button_send: 'Send'
+    contractual: 'Contractual'
+    destroy: 'Contractual was successfully destroyed.'
+    button_destroy: 'Destroy'
+    edit: 'Edit'
+    edit_contractual: 'Edit contractual'
+    error_message: 'prohibited this contractual from being saved:'
+    new_contractual: 'New contractual'
+    nui: 'NUI'
+    player_type: 'Type player'
+    save: 'Contractual was successfully created.'
+    show: 'Show'
+    update: 'Contractual was successfully updated.'
+  
+  technique: 
+    alert_message: 'Are you sure?'
+    back: 'back'
+    button_new: 'New technique'
+    create_technique: 'Technique was successfully created.'
+    delete_technique: 'Technique was successfully destroyed.'
+    destroy: 'Delete'
+    edit: 'Edit'
+    edit_technique: 'Edit techniques' 
+    error_message: 'prohibited this technique from being saved:'
+    new_technique: 'Nuevos techniques'
+    principal_position: 'Principal position'
+    secondary_position: 'Secondary position'
+    send: 'Send'
+    show: 'Show'
+    strong_foot: 'Strong foot'
+    technique: 'Technique'
+    update_technique: 'Technique was successfully updated.'
+    
   activerecord:
     errors:
       models:
@@ -59,3 +96,19 @@ en:
               blank: 'start date is required'
             end_date: 
               blank: 'end date is required'
+        contractual:
+          attributes:
+            player_type:
+              blank: 'type player is required'
+            agent:
+              blank: 'agent is required'
+            nui: 
+              blank: 'nui is required'
+        technique:
+          attributes:
+            principal_position:
+              blank: 'Principal position is required'
+            secondary_position:
+              blank: 'Secundary position is required'
+            strong_foot: 
+              blank: 'Strong foot is required'

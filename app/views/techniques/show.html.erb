@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t('technique.principal_position') %></strong>
+  <%= @technique.principal_position %>
+</p>
+
+<p>
+  <strong><%= t('technique.secondary_position') %></strong>
+  <%= @technique.secondary_position %>
+</p>
+
+<p>
+  <strong><%= t('technique.strong_foot') %></strong>
+  <%= @technique.strong_foot %>
+</p>
+
+<%= link_to t('technique.edit'), edit_technique_path(@technique) %> |
+<%= link_to t('technique.back'), techniques_path %>
