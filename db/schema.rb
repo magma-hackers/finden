@@ -10,16 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_11_150157) do
+ActiveRecord::Schema.define(version: 2018_12_19_174649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contractuals", force: :cascade do |t|
+    t.string "player_type"
+    t.string "agent"
+    t.string "nui"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
     t.string "principal_position"
     t.date "start_date"
     t.date "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "techniques", force: :cascade do |t|
+    t.string "princial_position"
+    t.string "secondary_position"
+    t.string "strong_foot"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,6 +52,7 @@ ActiveRecord::Schema.define(version: 2018_12_11_150157) do
     t.string "uid"
     t.string "image"
     t.string "name"
+    t.string "role", default: "player"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

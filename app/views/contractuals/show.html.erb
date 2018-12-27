@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t('contractual.player_type') %></strong>
+  <%= @contractual.player_type %>
+</p>
+
+<p>
+  <strong><%= t('contractual.agent') %></strong>
+  <%= @contractual.agent %>
+</p>
+
+<p>
+  <strong><%= t('contractual.nui') %></strong>
+  <%= @contractual.nui %>
+</p>
+
+<%= link_to t('contractual.edit'), edit_contractual_path(@contractual) %> |
+<%= link_to t('contractual.back'), contractuals_path %>

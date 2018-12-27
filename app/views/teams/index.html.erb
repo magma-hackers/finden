@@ -24,7 +24,9 @@
         <td><%= team.end_date %></td>
         <td><%= link_to t('team.show'), team %></td>
         <td><%= link_to t('team.edit'), edit_team_path(team) %></td>
-        <td><%= link_to t('team.destroy'), team, method: :delete, data: { confirm: t('team.alert_message') } %></td>
+        <% if can? :destroy, team %>
+          <td><%= link_to t('team.destroy'), team, method: :delete, data: { confirm: t('team.alert_message') } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

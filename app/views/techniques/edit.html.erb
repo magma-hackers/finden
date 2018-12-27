@@ -1,0 +1,6 @@
+<h1><%= t('technique.edit_technique') %></h1>
+
+<%= render 'form', technique: @technique %>
+
+<%= link_to t('technique.show'), @technique %> |
+<%= link_to t('technique.back'), techniques_path %>
