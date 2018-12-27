@@ -67,7 +67,9 @@ en:
     team_destroy: 'Team was successfully destroyed.'
     team_update: 'Team was successfully updated.'
     teams: 'Teams'
-  
+    information_add: 'Information Added'
+    information_new: 'Add new information'
+    
   contractual: 
     agent: 'Agent'
     alert_message: 'Are you sure?'
@@ -103,7 +105,7 @@ en:
     strong_foot: 'Strong foot'
     technique: 'Technique'
     update_technique: 'Technique was successfully updated.'
-    
+   
   activerecord:
     errors:
       models:
