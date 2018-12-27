@@ -2,7 +2,105 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
-  color: green;
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.image-content {
+  align-items: center;
+  background-image: url('faqs.jpg');
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.image-background {
+  max-width: 100%;
+}
+
+.hero-title {
+  font-size: 47px;
+  font-weight: 300;
+  margin:0;
+  text-transform: uppercase;
+
+  &.title-faqs {
+    color: $white;
+    text-align: center;
+  }
+
+  &.title-contact {
+    color: $space-grey;
+    margin-left: 25px;
+    margin-top: 150px;
+  }
+
+  &.title-about {
+    color: $white;
+  }
+
+}
+
+.question {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.answer {
+  color: $middle-grey;
+  text-align: justify;
+}
+
+.background-contact {
+  align-items: center;
+  background-image: url('contact.jpg');
+  background-size: cover;
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  padding: 0;
+  width: 500px;
+}
+
+.container-contact {
+  margin: 0;
+}
+
+.contact-info {
+  height: 500px;
+} 
+
+.contact-info-email {
+  align-items: center;
+  display: flex;
+  flex-direction: initial;
+}
+
+.contact-icon {
+  height: fit-content;
+  margin-left: 25px;
+}
+
+.contact-information {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.about-container {
+  background-color: $space-grey;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
+}
+
+.about-info {
+  color: $white;
+  font-size: 16px;
   text-align: center;
+  padding: 10px;
 }

@@ -1,2 +1,15 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<div class='row container-contact'>
+  <div class='background-contact col s12 m4'>
+  </div>
+  <div class='col s12 m8 contact-info'>
+    <h3 class='hero-title title-contact'><%= t('contact.title') %></h3>
+    <div class='contact-info-email'>
+      <%= image_tag('email.png', class:'contact-icon') %>
+      <p class='contact-information'><%= t('contact.mail') %></p>
+    </div>
+    <div class='contact-info-email'>
+      <%= image_tag('place.png', class:'contact-icon') %>
+      <p class='contact-information'><%= t('contact.country') %></p>
+    </div>
+  </div>
+</div>
