@@ -45,6 +45,8 @@ en:
     team_destroy: 'Team was successfully destroyed.'
     team_update: 'Team was successfully updated.'
     teams: 'Teams'
+    information_add: 'Information Added'
+    information_new: 'Add new information'
 
   activerecord:
     errors:

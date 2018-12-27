@@ -45,6 +45,8 @@ es:
     team_destroy: 'El equipo fue eliminado.'
     team_update: 'El equipo fue actualizado.'
     teams: 'Equipos'
+    information_add: 'Información Agregada'
+    information_new: 'Agregar información'
 
   activerecord:
     errors:
