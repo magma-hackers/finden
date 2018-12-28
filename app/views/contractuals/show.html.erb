@@ -1,27 +1,27 @@
 <div class='container'>
-<div class='row'>
-<div id='form_team' class='col s12 m6 l12 '> 
+  <div class='row'>
+    <div class='col s12 m6 l12 '> 
 
-<p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t('contractual.player_type') %></strong>
-  <%= @contractual.player_type %>
-</p>
+    <p>
+      <strong><%= t('contractual.player_type') %></strong>
+      <%= @contractual.player_type %>
+    </p>
 
-<p>
-  <strong><%= t('contractual.agent') %></strong>
-  <%= @contractual.agent %>
-</p>
+    <p>
+      <strong><%= t('contractual.agent') %></strong>
+      <%= @contractual.agent %>
+    </p>
 
-<p>
-  <strong><%= t('contractual.nui') %></strong>
-  <%= @contractual.nui %>
-</p>
+    <p>
+      <strong><%= t('contractual.nui') %></strong>
+      <%= @contractual.nui %>
+    </p>
 
-<%= link_to t('contractual.edit'), edit_contractual_path(@contractual) %> |
-<%= link_to t('contractual.back'), contractuals_path %>
+    <%= link_to t('contractual.edit'), edit_contractual_path(@contractual) %> |
+    <%= link_to t('contractual.back'), contractuals_path %>
 
-</div>
-</div>
+    </div>
+  </div>
 </div>
