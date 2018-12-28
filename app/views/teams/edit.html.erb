@@ -1,14 +1,14 @@
 <div class='container'>
-<div class='row'>
-<div id='form_team' class='col s12 m6 l12 '> 
+    <div class='row'>
+        <div class='col s12 m6 l12 '> 
 
-<h1><%= t('team.edit_message') %></h1>
+        <h1><%= t('team.edit_message') %></h1>
 
-<%= render 'form', team: @team %>
+        <%= render 'form', team: @team %>
 
-<%= link_to t('team.show'), @team %> |
-<%= link_to t('team.back'), teams_path %>
+        <%= link_to t('team.show'), @team %> |
+        <%= link_to t('team.back'), teams_path %>
 
-</div>
-</div>
+        </div>
+    </div>
 </div>

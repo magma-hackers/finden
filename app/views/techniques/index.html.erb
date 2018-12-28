@@ -1,31 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class='container'>
+  <div class='row'>
+    <div class='col s12 m6 l12 '> 
 
-<h1><%= t('technique.technique') %></h1>
+    <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th><%= t('technique.principal_position') %></th>
-      <th><%= t('technique.secondary_position') %></th>
-      <th><%= t('technique.strong_foot') %></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <h1><%= t('technique.technique') %></h1>
 
-  <tbody>
-    <% @techniques.each do |technique| %>
-      <tr>
-        <td><%= technique.principal_position %></td>
-        <td><%= technique.secondary_position %></td>
-        <td><%= technique.strong_foot %></td>
-        <td><%= link_to t('technique.show'), technique %></td>
-        <td><%= link_to t('technique.edit'), edit_technique_path(technique) %></td>
-        <td><%= link_to t('technique.destroy'), technique, method: :delete, data: { confirm: t('technique.alert_message') } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <table>
+      <thead>
+        <tr>
+          <th><%= t('technique.principal_position') %></th>
+          <th><%= t('technique.secondary_position') %></th>
+          <th><%= t('technique.strong_foot') %></th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<br>
+      <tbody>
+        <% @techniques.each do |technique| %>
+          <tr>
+            <td><%= technique.principal_position %></td>
+            <td><%= technique.secondary_position %></td>
+            <td><%= technique.strong_foot %></td>
+            <td><%= link_to t('technique.show'), technique %></td>
+            <td><%= link_to t('technique.edit'), edit_technique_path(technique) %></td>
+            <td><%= link_to t('technique.destroy'), technique, method: :delete, data: { confirm: t('technique.alert_message') } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<%= link_to t('technique.button_new'), new_technique_path %>
+    <br>
+
+    <%= link_to t('technique.button_new'), new_technique_path, { class: 'btn' } %>
+    </div>
+  </div>
+</div>
