@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2018_12_19_174649) do
   end
 
   create_table "techniques", force: :cascade do |t|
-    t.string "princial_position"
+    t.string "principal_position"
     t.string "secondary_position"
     t.string "strong_foot"
     t.datetime "created_at", null: false
