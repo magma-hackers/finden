@@ -26,6 +26,10 @@
               <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
             </div>
 
+            <div class="input-field">
+              <%= f.label :role %><br />
+              <%= f.select :role, options_for_select([['Club', 'club'], ['Player', 'player']]), {}, class: 'browser-default' %>
+            </div>
             <div class="actions">
               <%= f.button class: "waves-effect waves-light btn", type: :submit do %>
                 <%= t('.sign_up') %>
