@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-12-28
+  place: MyText
+  schedule: 2018-12-28 15:10:36
+  club: MyText
+  description: MyText
+  category: MyText
+
+two:
+  date: 2018-12-28
+  place: MyText
+  schedule: 2018-12-28 15:10:36
+  club: MyText
+  description: MyText
+  category: MyText

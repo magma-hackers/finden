@@ -1,0 +1,47 @@
+<%= form_with(model: visorium, local: true) do |form| %>
+  <% if visorium.errors.any? %>
+    <div id='error_explanation'>
+      <h2><%= pluralize(visorium.errors.count, 'errores') %><%= t('visoria.forbidden_message') %></h2>
+
+      <ul>
+      <% visorium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class='field'>
+    <%= form.label t('visoria.date') %>
+    <%= form.date_field :date %>
+  </div>
+
+  <div class='field'>
+    <%= form.label t('visoria.place') %>
+    <%= form.text_area :place %>
+  </div>
+
+  <div class='field'>
+    <%= form.label t('visoria.schedule') %>
+    <%= form.text_field :schedule %>
+  </div>
+
+  <div class='field'>
+    <%= form.label t('visoria.club') %>
+    <%= form.text_area :club %>
+  </div>
+
+  <div class='field'>
+    <%= form.label t('visoria.description') %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class='field'>
+    <%= form.label t('visoria.category') %>
+    <%= form.text_area :category %>
+  </div>
+
+  <div class='actions'>
+    <%= form.submit t('visoria.send'), { class: 'btn' } %>
+  </div>
+<% end %>

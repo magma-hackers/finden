@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :visoria
   get 'pages/contact'
   get 'pages/faq'
   get 'pages/about'

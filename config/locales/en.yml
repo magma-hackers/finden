@@ -105,7 +105,26 @@ en:
     strong_foot: 'Strong foot'
     technique: 'Technique'
     update_technique: 'Technique was successfully updated.'
-   
+  
+  visoria: 
+    date: 'Date'
+    place: 'Place'
+    schedule: 'Schedule'
+    club: 'Club'
+    description: 'Description'
+    category: 'Category'
+    send: 'Send'
+    back: 'Back'
+    show: 'Show'
+    title_edit: 'Editing Visorium'
+    destroy: 'Delete'
+    alert_message: 'Are you sure?'
+    button_new: 'New visoria'
+    forbidden_message: 'prohibited this visorium from being saved:'
+    new_visoria: 'new visoria'
+    edit: 'edit'
+    visorium: 'Visorium'
+  
   activerecord:
     errors:
       models:
@@ -135,3 +154,17 @@ en:
               blank: 'Secundary position is required'
             strong_foot: 
               blank: 'Strong foot is required'
+        visorium:
+          attributes: 
+            date:
+              blank: 'date is required'
+            place:
+              blank: 'place is required'
+            schedule:
+              blank: 'schedule is required'
+            club:
+              blank: 'club is required'
+            description:
+              blank: 'description is required'
+            category:
+              blank: 'category is required'

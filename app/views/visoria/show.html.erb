@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t('visoria.date') %></strong>
+  <%= @visorium.date %>
+</p>
+
+<p>
+  <strong><%= t('visoria.place') %></strong>
+  <%= @visorium.place %>
+</p>
+
+<p>
+  <strong><%= t('visoria.schedule') %></strong>
+  <%= @visorium.schedule %>
+</p>
+
+<p>
+  <strong><%= t('visoria.club') %></strong>
+  <%= @visorium.club %>
+</p>
+
+<p>
+  <strong><%= t('visoria.description') %></strong>
+  <%= @visorium.description %>
+</p>
+
+<p>
+  <strong><%= t('visoria.category') %></strong>
+  <%= @visorium.category %>
+</p>
+
+<%= link_to t('visoria.edit'), edit_visorium_path(@visorium) %> |
+<%= link_to t('visoria.back'), visoria_path %>
