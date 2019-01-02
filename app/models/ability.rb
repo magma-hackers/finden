@@ -9,8 +9,8 @@ class Ability
       alias_action :create, :read, :update, to: :cru
       can :cru, Team
     elseif user.role == 'club'
-      alias_action :create, :read, :update, to: :cru
-      can :cru, Team
+      alias_action :create, :read, :update, :delete, to: :crud
+      can :crud, Visorium
     end
   end
 end

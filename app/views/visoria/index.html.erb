@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t('visoria.visorium') %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t('visoria.date') %></th>
+      <th><%= t('visoria.place') %></th>
+      <th><%= t('visoria.schedule') %></th>
+      <th><%= t('visoria.club') %></th>
+      <th><%= t('visoria.description') %></th>
+      <th><%= t('visoria.category') %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @visoria.each do |visorium| %>
+      <tr>
+        <td><%= visorium.date %></td>
+        <td><%= visorium.place %></td>
+        <td><%= visorium.schedule %></td>
+        <td><%= visorium.club %></td>
+        <td><%= visorium.description %></td>
+        <td><%= visorium.category %></td>
+        <td><%= link_to t('visoria.show'), visorium %></td>
+        <td><%= link_to t('visoria.edit'), edit_visorium_path(visorium) %></td>
+        <td><%= link_to t('visoria.destroy'), visorium, method: :delete, data: { confirm:  t('visoria.alert_message') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('visoria.button_new'), new_visorium_path %>

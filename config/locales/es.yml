@@ -105,7 +105,26 @@ es:
     strong_foot: 'Pie fuerte'
     technique: 'Técnicas'
     update_technique: 'Las técnicas fueron actualizadas existosamente'
-
+  
+  visoria: 
+    date: 'Fecha'
+    place: 'Lugar'
+    schedule: 'Horario'
+    club: 'Club'
+    description: 'Descripción'
+    category: 'Categoría'
+    send: 'Enviar'
+    back: 'Atrás'
+    show: 'Mostrar'
+    title_edit: 'Editar Visoría'
+    destroy: 'Eliminar'
+    alert_message: '¿Estás seguro?'
+    button_new: 'Nueva visoria'
+    forbidden_message: 'Los siguientes campos no pueden estar vacios: '
+    new_visoria: 'Nueva visoria'
+    edit: 'Editar'
+    visorium: 'Visoría'
+    
   activerecord:
     errors:
       models:
@@ -134,5 +153,18 @@ es:
             secondary_position:
               blank: 'La posicion secundaria no debe estar en blanco'
             strong_foot: 
-              blank: 'Tú pie fuerte no debe estar en blanco'
-           
+              blank: 'Tu pie fuerte no debe estar en blanco'
+        visorium:
+          attributes: 
+            date:
+              blank: 'La fecha no debe estar en blanco'
+            place:
+              blank: 'El lugar no debe estar en blanco'
+            schedule:
+              blank: 'El horario no debe estar en blanco'
+            club:
+              blank: 'El Club no debe estar en blanco'
+            description:
+              blank: 'La descripción no debe estar en blanco'
+            category:
+              blank: 'La categoría no debe estar en blanco'
