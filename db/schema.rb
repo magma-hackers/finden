@@ -23,6 +23,21 @@ ActiveRecord::Schema.define(version: 2019_01_05_163759) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "player_informations", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "country"
+    t.string "state"
+    t.string "city"
+    t.string "nationality"
+    t.date "date"
+    t.string "gender"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_player_informations_on_user_id"
+  end
+
   create_table "teams", force: :cascade do |t|
     t.string "name"
     t.string "principal_position"
@@ -75,7 +90,8 @@ ActiveRecord::Schema.define(version: 2019_01_05_163759) do
     t.text "description"
     t.text "category"
     t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+    t.datetime "updated_at", null: false end
+
+  add_foreign_key "player_informations", "users"
 
 end
