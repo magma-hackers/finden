@@ -1,9 +1,7 @@
-<nav>
-  <div class="nav-wrapper navbar grey darken-4">
-    <%= link_to image_tag('finden.png', alt: 'Image Description', class: 'logo-nav'), root_path, class:'main-navigation-logo' %> 
-    <a href="#" data-target="mobile-demo"  class="sidenav-trigger"><i class="inline-icon material-icons">menu</i></a>
-    <ul class="right hide-on-med-and-down">
-      <% if user_signed_in? %>
+<ul id="dropdown1" class="dropdown-content">
+  <li><%= link_to t('header.edit_profile'), edit_user_registration_path, class: 'navbar-link' %> |</li>
+  <li class="divider"></li>
+  <% if user_signed_in? %>
         <% if can? :crud, Visorium %>
           <li>
             <%= link_to t('visoria.visorium'), new_visorium_url %>
@@ -24,15 +22,23 @@
             <%= link_to t('team.teams'), new_team_path %>
           </li>
         <% end %>
-        <li><a>Logged in as <strong><%= current_user.email %></strong></li></a>
-        <li><a><%= link_to t('header.edit_profile'), edit_user_registration_path, class: 'navbar-link' %> |</li></a>
-        <li><a><%= link_to t('header.sign_out'), destroy_user_session_path, method: :delete, class: 'navbar-link'  %></li></a>
+  <% end %>
+  <li class="divider"></li>
+</ul>
+<nav>
+  <div class="nav-wrapper">
+    <%= link_to image_tag('finden.png', alt: 'Image Description', class: 'logo-nav'), root_path, class:'main-navigation-logo' %> 
+    <a href="#" data-target="mobile-demo"  class="sidenav-trigger"><i class="inline-icon material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">  
+      <% if user_signed_in? %>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><%= t('header.menu_opt')%></a></li>      
+        <li><a><%= current_user.role %> <strong><%= current_user.email %></strong></li></a>
+        <li>|<a><%= link_to t('header.sign_out'), destroy_user_session_path, method: :delete, class: 'navbar-link'  %></li></a>
       <% else %>
-         <li><%= link_to t('header.about_us'), pages_about_path %></li>
+        <li><%= link_to t('header.about_us'), pages_about_path %></li>
         <li><%= link_to t('header.faq'), pages_faq_path %></li>
         <li><%= link_to t('header.contact'), pages_contact_path %></a></li>
-        <li><a><%= link_to t('header.sign_up'), new_user_registration_path, class: 'navbar-link'  %> |</li></a>
-        <li><a><%= link_to t('header.log_in'), new_user_session_path, class: 'navbar-link'  %></li></a>
+        <li>|<a><%= link_to t('header.log_in'), new_user_session_path, class: 'navbar-link'  %></li></a>
       <% end %>
     </ul>
   </div>
