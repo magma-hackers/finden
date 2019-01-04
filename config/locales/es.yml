@@ -9,6 +9,7 @@ es:
     edit_profile: 'Mi Perfil'
     sign_out: 'Cerrar Sesión'
     logged_user: 'Usuario'
+    menu_opt: 'Opciones'
 
   footer:
     content: 'Contenido del Footer'

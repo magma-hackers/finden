@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
    setMaterialize('.sidenav', 'Sidenav', {});
 }); 
  
-document.addEventListener("turbolinks:load", function() {
+document.addEventListener('turbolinks:load', function() {
  M.AutoInit();
- $(".dropdown-trigger").dropdown();
 });
