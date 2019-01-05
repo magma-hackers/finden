@@ -104,3 +104,14 @@ body {
   text-align: center;
   padding: 10px;
 }
+
+.background-aabout {
+  align-items: center;
+  background-image: url('contact.jpg');
+  background-size: cover;
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  padding: 0;
+  width: 500px;
+}
