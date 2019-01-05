@@ -125,7 +125,28 @@ en:
     new_visoria: 'new visoria'
     edit: 'edit'
     visorium: 'Visorium'
-  
+
+  visor: 
+    alert_delete: 'Viewer was successfully destroyed.'
+    alert_succesful: 'Viewer was successfully created.'
+    alert_sure: 'Are you sure?'
+    alert_update: 'Viewer was successfully updated.'
+    back: 'back'
+    birth: 'date birth'
+    club: 'Club'
+    destroy: 'destroy'
+    edit: 'edit'
+    edit_viewer: 'Editing Viewer'
+    forbidden_message: 'prohibited this viewer from being saved: '
+    last_name: 'last name'
+    name: 'name'
+    new_viewer: 'new viewer'
+    send: 'send'
+    show: 'show'
+    telephone: 'telephone'
+    viewers: 'Viewer'
+    visor: 'viewer'
+
   activerecord:
     errors:
       models:
@@ -169,3 +190,29 @@ en:
               blank: 'description is required'
             category:
               blank: 'category is required'
+        viewer:
+          attributes: 
+            date:
+              blank: 'date is required'
+            place:
+              blank: 'place is required'
+            schedule:
+              blank: 'schedule is required'
+            club:
+              blank: 'club is required'
+            description:
+              blank: 'description is required'
+            category:
+              blank: 'category is required'
+        viewer:
+          attributes: 
+            name:
+              blank: 'name is required'
+            last_name:
+              blank: 'last name is required'
+            birth:
+              blank: 'birth is required'
+            telephone:
+              blank: 'telephone is required'
+            club:
+              blank: 'club is required'

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t('visor.name') %></strong>
+  <%= @viewer.name %>
+</p>
+
+<p>
+  <strong><%= t('visor.last_name') %></strong>
+  <%= @viewer.last_name %>
+</p>
+
+<p>
+  <strong><%= t('visor.birth') %></strong>
+  <%= @viewer.birth %>
+</p>
+
+<p>
+  <strong><%= t('visor.telephone') %></strong>
+  <%= @viewer.telephone %>
+</p>
+
+<p>
+  <strong><%= t('visor.club') %></strong>
+  <%= @viewer.club %>
+</p>
+
+<%= link_to t('visor.edit'), edit_viewer_path(@viewer) %> |
+<%= link_to t('visor.back'), viewers_path %>

@@ -17,6 +17,7 @@ class Ability
     if user.role == 'club'
       alias_action :create, :read, :update, :delete, to: :crud
       can :crud, Visorium
+      can :crud, Viewer
     end
   end
 end

@@ -7,6 +7,11 @@
             <%= link_to t('visoria.visorium'), new_visorium_url %>
           </li>
         <% end %>
+         <% if can? :crud, Viewer %>
+          <li>
+            <%= link_to t('visor.viewers'), new_viewer_url %>
+          </li>
+        <% end %>
         <% if can? :crud, Technique %>
           <li>
             <%= link_to t('technique.technique'), new_technique_path %>

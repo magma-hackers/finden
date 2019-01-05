@@ -1,0 +1,42 @@
+<%= form_with(model: viewer, local: true) do |form| %>
+  <% if viewer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(viewer.errors.count, "errores ") %><%= t('visor.forbidden_message') %></h2>
+
+      <ul>
+      <% viewer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label t('visor.name') %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label t('visor.last_name') %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label t('visor.birth') %>
+    <%= form.date_field :birth %>
+  </div>
+
+  <div class="field">
+    <%= form.label t('visor.telephone') %>
+    <%= form.number_field :telephone %>
+  </div>
+
+  <div class="field">
+    <%= form.label t('visor.club') %>
+    <%= form.text_field :club %>
+  </div>
+
+  <div class='actions'>
+    <%= form.submit t('visor.send'), { class: 'btn' } %>
+  </div>
+<% end %>
