@@ -1,0 +1,15 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col s12 m6 l12 '>
+
+      <h1><%= t('personal.edit_message') %></h1>
+
+      <%= render 'form', personal: @personals %>
+
+      <button class="btn waves-effect waves-light right" onclick="window.history.back()" name="action">
+        <%= t('personal.back') %>
+      </button>
+
+    </div>
+  </div>
+</div>

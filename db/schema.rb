@@ -90,8 +90,8 @@ ActiveRecord::Schema.define(version: 2019_01_05_163759) do
     t.text "description"
     t.text "category"
     t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false end
+    t.datetime "updated_at", null: false
+  end
 
   add_foreign_key "player_informations", "users"
-
 end

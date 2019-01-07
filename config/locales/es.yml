@@ -146,6 +146,14 @@ es:
     telephone: 'Teléfono'
     viewers: 'Visores'
     visor: 'visor'
+
+  personal:
+    edit_message: 'Editar información personal'
+    personal_view: 'Información personal'
+    back: 'Atras'
+    edit_button: 'Editar'
+    personal_update: 'Perfil Actualizado'
+    gender_gender: 'Genero'
     
   activerecord:
     errors:

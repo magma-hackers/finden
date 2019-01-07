@@ -1,6 +1,6 @@
-class CreatePlayerInformations < ActiveRecord::Migration[5.2]
+class CreatePersonals < ActiveRecord::Migration[5.2]
   def change
-    create_table :player_informations do |t|
+    create_table :personals do |t|
       t.string :first_name
       t.string :last_name
       t.string :country

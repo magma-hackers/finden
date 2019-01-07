@@ -1,3 +1,5 @@
+<%= form_with model: @personal do |f| %>
+
   <div class="container">
     <div class="card-panel">
       <div class="settings-personal">
@@ -8,11 +10,11 @@
               <div class="row-name col s12">
                 <div class="input-field col s12 m6">
                   <input id="first_name" type="text" class="validate">
-                  <label for="first_name"> First Name </label>
+                  <%= f.label :first_name %>
                 </div>
                 <div class="input-field col s12 m6">
                   <input id="last_name" type="text" class="validate">
-                  <label for="last_name"> Last Name </label>
+                  <%= f.label :last_name %>
                 </div>
               </div>
             </div>
@@ -21,11 +23,11 @@
               <div class="row-name col s12">
                 <div class="input-field col s12 m6">
                   <input id="country" type="text" class="validate">
-                  <label for="country"> Country </label>
+                  <%= f.label :country %>
                 </div>
                 <div class="input-field col s12 m6">
-                  <input id="State" type="text" class="validate">
-                  <label for="State"> State </label>
+                  <input id="state" type="text" class="validate">
+                  <%= f.label :state %>
                 </div>
               </div>
             </div>
@@ -33,12 +35,12 @@
             <div class="row">
               <div class="row-name col s12">
                 <div class="input-field col s12 m6">
-                  <input id="City" type="text" class="validate">
-                  <label for="City"> City </label>
+                  <input id="city" type="text" class="validate">
+                  <%= f.label :city %>
                 </div>
                 <div class="input-field col s12 m6">
-                  <input id="Nationality" type="text" class="validate">
-                  <label for="Nationality"> Nationality </label>
+                  <input id="nationality" type="text" class="validate">
+                  <%= f.label :nationality %>
                 </div>
               </div>
             </div>
@@ -46,11 +48,11 @@
             <div class="row">
               <div class="row-asd col s12">
                 <div class="col s12 m6">
-                  <label> Date </label>
+                  <%= f.label :date %>
                   <input type="date" class="datepicker">
                 </div>
                 <div class="col s12 m6">
-                  <label> Gender </label>
+                  <%= f.label :gender %>
                   <select class="browser-default">
                     <option value="" disabled="" selected=""> Gender </option>
                     <option value="1"> Male </option>
@@ -61,11 +63,15 @@
               </div>
             </div>
 
-            <button class="btn waves-effect waves-light right" type="submit" name="action"> Submit
-            </button>
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.submit "Submit", class: "btn waves-effect waves-light right" %>
+              </div>
+            </div>
 
           </form>
         </div>
       </div>
     </div>
   </div>
+<% end %>
