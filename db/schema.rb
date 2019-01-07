@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_02_152542) do
+ActiveRecord::Schema.define(version: 2019_01_05_163759) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,16 @@ ActiveRecord::Schema.define(version: 2019_01_02_152542) do
     t.string "role", default: "player"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "viewers", force: :cascade do |t|
+    t.string "name"
+    t.string "last_name"
+    t.date "birth"
+    t.integer "telephone"
+    t.string "club"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "visoria", force: :cascade do |t|

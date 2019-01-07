@@ -125,6 +125,27 @@ es:
     new_visoria: 'Nueva visoria'
     edit: 'Editar'
     visorium: 'Visoría'
+  
+  visor: 
+    alert_delete: 'El visor fue eliminado correctamente.'
+    alert_succesful: 'El visor fue creado correctamente.'
+    alert_sure: '¿Estás seguro?'
+    alert_update: 'El visor fue actualizado correctamente.'
+    back: 'atrás'
+    birth: 'Fecha nacimiento'
+    club: 'Club'
+    destroy: 'Eliminar'
+    edit: 'editar'
+    edit_viewer: 'editar visor'
+    forbidden_message: 'Los siguientes campos no pueden ser guardados: '
+    last_name: 'Apellidos'
+    name: 'Nombre'
+    new_viewer: 'nuevo visor'
+    send: 'enviar'
+    show: 'mostrar'
+    telephone: 'Teléfono'
+    viewers: 'Visores'
+    visor: 'visor'
     
   activerecord:
     errors:
@@ -169,3 +190,15 @@ es:
               blank: 'La descripción no debe estar en blanco'
             category:
               blank: 'La categoría no debe estar en blanco'
+        viewer:
+          attributes: 
+            name:
+              blank: 'El nombre no debe estar en blanco'
+            last_name:
+              blank: 'los apellidos no debe estar en blanco'
+            birth:
+              blank: 'La fecha de nacimiento no debe estar en blanco'
+            telephone:
+              blank: 'El teléfono no debe estar en blanco'
+            club:
+              blank: 'El club no debe estar en blanco'

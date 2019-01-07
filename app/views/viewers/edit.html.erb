@@ -1,0 +1,6 @@
+<h1><%= t('visor.edit_viewer') %></h1>
+
+<%= render 'form', viewer: @viewer %>
+
+<%= link_to t('visor.show'), @viewer %> |
+<%= link_to t('visor.back'), viewers_path %>
