@@ -27,17 +27,24 @@
               <td><%= visorium.club %></td>
               <td><%= visorium.description %></td>
               <td><%= visorium.category %></td>
-              <td><%= link_to t('visoria.show'), visorium %></td>
-              <td><%= link_to t('visoria.edit'), edit_visorium_path(visorium) %></td>
-              <td><%= link_to t('visoria.destroy'), visorium, method: :delete, data: { confirm:  t('visoria.alert_message') } %></td>
+              <% if can? :read, Visorium %>
+                <td><%= link_to t('visoria.show'), visorium %></td>
+              <% end %>
+              <% if can? :crud, Visorium %>
+                <td><%= link_to t('visoria.edit'), edit_visorium_path(visorium) %></td>
+              <% end %>
+              <% if can? :crud, Visorium %>
+                <td><%= link_to t('visoria.destroy'), visorium, method: :delete, data: { confirm:  t('visoria.alert_message') } %></td>
+              <% end %>
             </tr>
           <% end %>
         </tbody>
       </table>
 
       <br>
-
-      <%= link_to t('visoria.button_new'), new_visorium_path, { class: 'btn' } %>
+      <% if can? :crud, Visorium %>
+        <%= link_to t('visoria.button_new'), new_visorium_path, { class: 'btn' } %>
+      <% end %>
     </div>
   </div>
 </div>

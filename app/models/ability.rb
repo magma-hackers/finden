@@ -12,6 +12,7 @@ class Ability
       can :crud, Team
       can :crud, Technique
       can :crud, Contractual
+      can :read, Visorium
     end
     
     if user.role == 'club'

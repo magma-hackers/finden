@@ -32,8 +32,10 @@
         <strong><%= t('visoria.category') %></strong>
         <%= @visorium.category %>
       </p>
-
-      <%= link_to t('visoria.edit'), edit_visorium_path(@visorium) %> |
+      
+      <% if can? :crud, Visorium %>
+        <%= link_to t('visoria.edit'), edit_visorium_path(@visorium) %> |
+      <% end %>
       <%= link_to t('visoria.back'), visoria_path %>
 
     </div>
