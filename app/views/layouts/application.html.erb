@@ -13,19 +13,11 @@
   <body>
   <%= render partial: 'welcome/header' %>
    <% if notice %>  
-    <div class="card light-green">
-      <div class="card-content white-text notice">
-        <%= notice %>
-      </div>
-    </div>
+    <script>toastr.success('<%= notice %>', 'FINDEN ')</script>
   <% end %>
 
   <% if alert %>
-    <div class="card red lighten-1">
-        <div class="card-content white-text">
-        <%= alert %>
-      </div>
-    </div>
+    <script>toastr.error('<%= alert %>', 'FINDEN ')</script>
   <% end %>
 
   <%= yield %>
