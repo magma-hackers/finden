@@ -21,6 +21,9 @@ gem 'omniauth-facebook'
 gem 'materialize-sass'
 gem 'jquery-turbolinks'
 
+gem 'toastr-rails'
+gem 'jquery-rails'
+
 gem 'devise-i18n'
 gem 'cancancan'
 
