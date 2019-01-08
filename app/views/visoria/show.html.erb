@@ -2,7 +2,8 @@
   <div class='row'>
     <div class='col s12 m6 l12 '> 
       <p id="notice"><%= notice %></p>
-
+      
+      <% if current_user.role != 'player' %>
       <p>
         <strong><%= t('visoria.date') %></strong>
         <%= @visorium.date %>
@@ -36,8 +37,48 @@
       <% if can? :crud, Visorium %>
         <%= link_to t('visoria.edit'), edit_visorium_path(@visorium) %> |
       <% end %>
-      <%= link_to t('visoria.back'), visoria_path %>
-
+        <%= link_to t('visoria.back'), visoria_path %>
+    <% else %>
+        <div class="row">
+          <div class="col s12 m7">
+            <div class="card">
+              <div class="card-image">
+                <%= link_to image_tag('homepage.jpg') %>            
+                <span class="card-title"><i class="material-icons circle green">filter_tilt_shift</i> Club <%= @visorium.club %></span>
+              </div>
+              <div class="card-content">
+                <p>
+                <strong><%= t('visoria.date') %></strong>
+                <%= @visorium.date %>
+                </p>
+                <p>
+                  <strong><%= t('visoria.place') %></strong>
+                  <%= @visorium.place %>
+                </p>
+                <p>
+                  <strong><%= t('visoria.schedule') %></strong>
+                  <%= @visorium.schedule %>
+                </p>
+                <p>
+                  <strong><%= t('visoria.category') %></strong>
+                  <%= @visorium.category %>
+                </p>
+                <p>
+                  <strong><%= t('visoria.description') %></strong>
+                  <%= @visorium.description %>
+                </p>                
+              </div>
+              <div class="card-action">
+                <%= link_to t('visoria.addme'), visoria_path %>
+                <%= link_to t('visoria.back'), visoria_path %>
+              </div>
+            </div>
+          </div>
+        </div>
+    <% end %>
     </div>
   </div>
 </div>
+
+
+

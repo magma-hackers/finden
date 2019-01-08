@@ -125,6 +125,8 @@ en:
     new_visoria: 'new visoria'
     edit: 'edit'
     visorium: 'Visorium'
+    next_visorium: 'Next Visorium'
+    addme: 'Add me'
 
   visor: 
     alert_delete: 'Viewer was successfully destroyed.'

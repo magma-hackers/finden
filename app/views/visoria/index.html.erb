@@ -3,8 +3,8 @@
     <div class='col s12 m6 l12 '> 
       <p id="notice"><%= notice %></p>
 
-      <h1><%= t('visoria.visorium') %></h1>
-
+      <% if current_user.role != 'player' %>
+        <h1><%= t('visoria.visorium') %></h1>
       <table>
         <thead>
           <tr>
@@ -45,6 +45,38 @@
       <% if can? :crud, Visorium %>
         <%= link_to t('visoria.button_new'), new_visorium_path, { class: 'btn' } %>
       <% end %>
+
+      <% else %>
+       <h1><%= t('visoria.next_visorium') %></h1>
+        <% @visoria.each do |visorium| %>
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <i class="material-icons circle green">filter_tilt_shift</i>
+              <span class="title">
+              <p>
+                <strong><h5><%= t('visoria.club') %>
+                <%= visorium.club %></h5></strong>
+              </p>
+              </span>
+              <p>
+                <strong><%= t('visoria.date') %></strong>
+                <%= visorium.date %>
+              </p>
+              <p>
+                <strong><%= t('visoria.place') %></strong>
+                <%= visorium.place %> - <%= visorium.schedule %> 
+              </p>
+              <p>
+                <strong><%= t('visoria.schedule') %></strong>
+                <%= visorium.schedule %> 
+              </p>
+              <td><%= link_to t('visoria.show'), visorium %></td>
+              <a href="#!" class="secondary-content"><i class="medium material-icons">playlist_add</i></a>
+            </li>
+          </ul>
+          <% end %>
+      <% end %>
+      
     </div>
   </div>
 </div>
