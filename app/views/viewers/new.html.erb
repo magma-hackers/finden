@@ -1,5 +1,11 @@
-<h1><%= t('visor.new_viewer') %></h1>
+<div class='container'>
+    <div class='row'>
+        <div class='col s12 m6 l12 '> 
+        <h1><%= t('visor.new_viewer') %></h1>
 
-<%= render 'form', viewer: @viewer %>
+        <%= render 'form', viewer: @viewer %>
 
-<%= link_to t('visor.back'), viewers_path %>
+        <%= link_to t('visor.back'), viewers_path %>
+        </div>
+    </div>
+</div>
