@@ -7,7 +7,7 @@
             <%= link_to t('visoria.visorium'), new_visorium_url %>
           </li>
         <% end %>
-         <% if can? :crud, Viewer %>
+        <% if can? :crud, Viewer %>
           <li>
             <%= link_to t('visor.viewers'), new_viewer_url %>
           </li>
@@ -36,6 +36,11 @@
     <a href="#" data-target="mobile-demo"  class="sidenav-trigger"><i class="inline-icon material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">  
       <% if user_signed_in? %>
+        <% if can? :read, Visorium %>
+          <li>
+            <%= link_to t('visoria.visorium'), visoria_path %>
+          </li>
+        <% end %>
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><%= t('header.menu_opt')%></a></li>      
         <li><a><%= current_user.role %> <strong><%= current_user.email %></strong></li></a>
         <li>|<a><%= link_to t('header.sign_out'), destroy_user_session_path, method: :delete, class: 'navbar-link'  %></li></a>
