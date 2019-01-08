@@ -124,7 +124,9 @@ es:
     forbidden_message: 'Los siguientes campos no pueden estar vacios: '
     new_visoria: 'Nueva visoria'
     edit: 'Editar'
-    visorium: 'Visoría'
+    visorium: 'Visoria'
+    next_visorium: 'Proximas Visorias'
+    addme: 'Me interesa'
   
   visor: 
     alert_delete: 'El visor fue eliminado correctamente.'
