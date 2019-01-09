@@ -36,7 +36,10 @@
     <a href="#" data-target="mobile-demo"  class="sidenav-trigger"><i class="inline-icon material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">  
       <% if user_signed_in? %>
-        <% if can? :read, Visorium %>
+        <% if can? :assist, Visorium %>
+          <li>
+            <%= link_to t('visoria.my_visorium'), visorium_my_assist_path(current_user.id) %>
+          </li>
           <li>
             <%= link_to t('visoria.visorium'), visoria_path %>
           </li>

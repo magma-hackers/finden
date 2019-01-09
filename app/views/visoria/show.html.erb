@@ -69,7 +69,9 @@
                 </p>                
               </div>
               <div class="card-action">
-                <%= link_to t('visoria.addme'), visoria_path %>
+                <% if !@registered %>
+                  <%= link_to t('visoria.addme'), visorium_assist_path(visorium_id: @visorium.id) %>
+                <% end %>
                 <%= link_to t('visoria.back'), visoria_path %>
               </div>
             </div>

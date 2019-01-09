@@ -13,12 +13,23 @@ class Ability
       can :crud, Technique
       can :crud, Contractual
       can :read, Visorium
+      can :assist, Visorium
+      can :destroy_assist, Visorium
+      can :my_assist, Visorium
+      cannot :index, VisoriaController
+      cannot :new, VisoriaController
+      cannot :update, VisoriaController
+      cannot :destroy, VisoriaController
+      cannot :create, VisoriaController
     end
     
     if user.role == 'club'
       alias_action :create, :read, :update, :delete, to: :crud
       can :crud, Visorium
       can :crud, Viewer
+      cannot :assist, Visorium
+      cannot :destroy_assist, VisoriaController
+      cannot :my_assist, VisoriaController
     end
   end
 end
