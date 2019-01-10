@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t('personal_info.personal') %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t('personal_info.name') %></th>
+      <% if current_user.role == 'player'%>
+        <th><%= t('personal_info.birth_place') %></th>
+        <th><%= t('personal_info.born_date') %></th>
+        <th><%= t('personal_info.weight') %></th>
+        <th><%= t('personal_info.height') %></th>
+      <% end %>
+      <th><%= t('personal_info.gender') %></th>
+      <% if current_user.role == 'club'%>
+        <th>Club</th>
+      <% end %>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @information_personals.name %></td>
+      <% if current_user.role == 'player'%>
+        <td><%= @information_personals.birth_place %></td>
+        <td><%= @information_personals.born_date %></td>
+        <td><%= @information_personals.weight %></td>
+        <td><%= @information_personals.height %></td>
+      <% end %>
+      <td><%= @information_personals.gender %></td>
+      <% if current_user.role == 'club'%>
+        <td><%= @information_personals.club %></td>
+      <% end %>
+      <td><%= link_to t('personal_info.edit'), edit_information_personal_path(id: @information_personals.id) %></td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+
+<% unless @information_personals %>
+  <%= link_to t('personal_info.new') %>, new_information_personal_path %>
+<% end %>

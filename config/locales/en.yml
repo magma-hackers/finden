@@ -155,6 +155,34 @@ en:
     viewers: 'Viewer'
     visor: 'viewer'
 
+  personal_info: 
+    alert_message: 'Are you sure?'
+    back: 'Back'
+    birth_place: 'Birth place'
+    born_date: 'Born date'
+    create_message: 'La información personal fue creada correctamente.' 
+    destroy: 'destroy'
+    destroy_message: 'La información personal fue eliminado correctamente.' 
+    edit: 'edit'
+    edit_information: 'Editing personal information'
+    forbidden_message: 'prohibited this information personal from being saved:'
+    gender: 'Gender'
+    height: 'Height'
+    male: 'Male'
+    man: 'Man'
+    name: 'name'
+    new: 'New'
+    new_title: 'New personal information'
+    personal: 'Personal information'
+    send: 'Send'
+    show: 'Show'
+    update_message: 'La información personal fue actualizada correctamente.'
+    weight: 'Weight'
+
+  helper: 
+    without_image: 'Whitout image'
+    upload_picture: 'Upload picture'
+
   activerecord:
     errors:
       models:
@@ -224,3 +252,7 @@ en:
               blank: 'telephone is required'
             club:
               blank: 'club is required'
+        information_personal:
+          attributes: 
+            name:
+              blank: 'name is required'
