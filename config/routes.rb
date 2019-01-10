@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :information_personals
   resources :viewers
   resources :visoria do
     get '/assist', to: 'visoria#assist', as: :assist

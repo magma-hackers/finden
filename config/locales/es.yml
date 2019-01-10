@@ -154,7 +154,35 @@ es:
     telephone: 'Teléfono'
     viewers: 'Visores'
     visor: 'visor'
+  
+  personal_info: 
+    alert_message: '¿Estás seguro?'
+    back: 'Atrás'
+    birth_place: 'Lugar de nacimiento'
+    born_date: 'Fecha de nacimiento'
+    create_message: 'Information personal was successfully created.' 
+    destroy: 'Eliminar'
+    destroy_message: 'Information personal was successfully destroyed.' 
+    edit: 'Editar'
+    edit_information: 'Editando información personal'
+    forbidden_message: 'Los siguientes campos no pueden estar vacios: '
+    gender: 'Genero'
+    height: 'Estatura'
+    male: 'Mujer'
+    man: 'Hombre'
+    name: 'Nombre'
+    new: 'Nuevo'
+    new_title: 'Nueva información personal'
+    personal: 'Información personal'
+    send: 'Enviar'
+    show: 'Mostrar'
+    update_message: 'Information personal was successfully updated.'
+    weight: 'Peso'
     
+  helper: 
+    without_image: 'Sin imagen'
+    upload_picture: 'Subir imagen'
+
   activerecord:
     errors:
       models:
@@ -210,3 +238,7 @@ es:
               blank: 'El teléfono no debe estar en blanco'
             club:
               blank: 'El club no debe estar en blanco'
+        information_personal:
+          attributes: 
+            name:
+              blank: 'name is required'

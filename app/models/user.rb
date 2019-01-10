@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_one_attached :avatar
+  has_one :information_personal
   has_and_belongs_to_many :visoriums
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,

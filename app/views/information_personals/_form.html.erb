@@ -1,0 +1,56 @@
+<%= form_with(model: information_personal, local: true) do |form| %>
+  <% if information_personal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(information_personal.errors.count, "error") %><%= t('personal_info.forbidden_message') %></h2>
+
+      <ul>
+      <% information_personal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label t('personal_info.name') %>
+    <%= form.text_field :name %>
+  </div>
+  
+  <% if current_user.role == 'player' %>
+    <div class="field">
+      <%= form.label t('personal_info.birth_place') %>
+      <%= form.text_area :birth_place %>
+    </div>
+
+    <div class="field">
+      <%= form.label t('personal_info.born_date') %>
+      <%= form.date_field :born_date %>
+    </div>
+
+    <div class="field">
+      <%= form.label t('personal_info.weight') %>
+      <%= form.number_field :weight %>
+    </div>
+
+    <div class="field">
+      <%= form.label t('personal_info.height') %>
+      <%= form.number_field :height %>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.select :gender, options_for_select([[t('personal_info.male'), t('personal_info.male')], [t('personal_info.man'), t('personal_info.man')]]), {}, class: 'browser-default' %>
+  </div>
+  
+  <% if current_user.role == 'club' %>
+    <div class="field">
+      <%= form.label :club %>
+      <%= form.text_field :club %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
