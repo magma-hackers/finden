@@ -1,26 +1,38 @@
-<footer class="page-footer grey darken-4">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text"> <%= t('footer.content') %> </h5>
-        <p class="grey-text text-lighten-4"> <%= t('footer.motto') %> </p>
-        <%= link_to image_tag('mh_logo.png', width: 100, height: 100), class: 'brand-logo' %>
+<div class='wrapper-footer'
+  <div class='footer'>
+    <div class='container'>
+      <div class='row row-information'>
+        <div class='col s6 m4 colmun-footer'>
+          <ul class='ul-footer'>
+            <li class='title-footer'><%= link_to t('footer.about_us')%></li>
+            <li class='subtitle'><%= link_to t('footer.sponsor')%></li>
+            <li class='subtitle'><%= link_to t('footer.our_red')%></li>
+            <li class='subtitle no-margin'><%= link_to t('footer.especial_visitation')%></li>
+          </ul>
+        </div>
+        <div class='col s6 m4 colmun-footer'>
+          <ul class='ul-footer'>
+            <li class='title-footer'><%= link_to t('footer.about_finden'), pages_about_path %></li>
+            <li class='subtitle'><%= link_to t('header.about_us'), pages_about_path %></li>
+            <li class='subtitle'><%= link_to t('header.faq'), pages_faq_path %></li>
+            <li class='subtitle no-margin'><%= link_to t('header.contact'), pages_contact_path %></a></li>
+          </ul>
+        </div>
+        <div class='col s12 m4 colmun-footer social-icons'>
+          <div class='container-icons'>
+            <div class='icons'>  
+              <%= link_to image_tag('facebook-icon.svg'), 'https://www.facebook.com/YouDreamWeLink/', class:'image-icon' %>
+              <%= image_tag('email-icon.svg', class:'image-icon') %>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col l4 offset-l2 s12">
-        <h5 class="white-text"> <%= t('footer.about_us') %></h5>
-        <ul>
-          <li><a class="grey-text text-lighten-3" href="#!"> <%= t('footer.especial_visitation') %> </a></li>
-          <li><a class="grey-text text-lighten-3" href="#!"> <%= t('footer.sponsor') %> </a></li>
-          <li><a class="grey-text text-lighten-3" href="#!"> <%= t('footer.our_red') %> </a></li>
-        </ul>
-      </div>
+      <div class='row row-copyrigths'>
+          <div class='col s12 m12 copyrights'>
+            <hr>
+            <p><%= link_to t('footer.rights') %></p>
+          </div>
+        </div>
     </div>
   </div>
-
-  <div class="footer-copyright">
-      <div class="container">
-      <%= t('footer.rights') %>
-      <a class="grey-text text-lighten-4 right" href="#!"> <%= t('footer.more_links') %> </a>
-    </div>
-  </div>  
-</footer>
+</div>

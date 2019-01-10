@@ -10,6 +10,9 @@
 
 body {
   font-family: "Rubik", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
@@ -44,7 +47,7 @@ nav ul {
 }
 
 .sidenav {
-  background-color: $side-background;
+  background-color: $primary-color;
 }
 
 .sidenav li > a {
@@ -52,10 +55,124 @@ nav ul {
   font-size: 16px;
 
   &:hover {
-  color: $font-hover;
+  color: $secondary-font-color;
   }
 }
 
 .session-container {
   margin-top: 30px;
+}
+
+.wrapper-footer {
+  flex: 1;
+  position: relative;
+  background-color: $primary-color;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  color: white;
+}
+
+.row-information {
+  margin-bottom: 0px;
+}
+
+.ul-footer .subtitle > a {
+  color: $primary-font-color;
+  
+  &:hover {
+    border-bottom: 1px solid $secondary-font-color;
+  }
+}
+
+.title-footer {
+  margin-bottom: 10px;
+  & a {
+    font-size: 16px;
+    color: $secondary-font-color;
+    
+  }
+}
+
+.icons {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  margin-right: 50px;
+  align-items: baseline;
+
+  @media(max-width: 768px) {
+    margin-right: 40px
+   }
+}
+
+.image-icon {
+  width: 100%;
+  margin-right: 10px;
+  & img {
+    width: 30px;
+    @media(max-width: 768px) {
+      width: 20px;
+     }
+  }
+  @media(max-width: 768px) {
+    width: 20px;
+   }
+
+}
+
+.colmun-footer {
+  margin-top: 20px;
+}
+
+.social-icons {
+
+  @media(max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+.container-icons {
+  display: flex;
+  justify-content: flex-end;
+  height: 130px;
+  align-items: flex-end;
+  
+    @media(max-width: 768px) {
+     height: auto;
+    }
+}
+
+.subtitle {
+  margin-bottom: 10px;
+  font-size: 13px;
+
+  &.no-margin {
+    margin: 0;
+  }
+}
+
+.row-copyrigths {
+  margin: 0;
+}
+
+.copyrights {
+  text-align: center;
+  & a {
+    color: $secondary-font-color;
+  }
+}
+
+.row .social-icons.col.s3 {
+   
+  @media(max-width: 768px) {
+    margin-top: 0;
+    margin-left: 6px;
+  }
 }
