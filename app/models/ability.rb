@@ -28,6 +28,7 @@ class Ability
       can :crud, Visorium
       can :crud, Viewer
       can :inscription_list, Visorium
+      can :print_list_pdf, Visorium
       cannot :assist, Visorium
       cannot :destroy_assist, VisoriaController
       cannot :my_assist, VisoriaController

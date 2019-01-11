@@ -78,13 +78,14 @@ class VisoriaController < ApplicationController
 
   def inscription_list
     v = Visorium.find(params[:visorium_id])
-    @list_assist = v.users
+    @list_assist = v.users  
+  end
 
+  def print_list_pdf
     respond_to do |format|
-      format.html
       format.pdf do
-        pdf = InscriptionList.new(@list_assist)
-        send_data pdf.render, filename: 'Invoice', type: 'application/pdf', disposition: 'inline'
+        pdf = ListPdf.new(params[:visorium_id])
+        send_data pdf.render, filename: 'list_pdf.pdf', type: 'application/pdf', disposition: 'inline'
       end
     end
   end
