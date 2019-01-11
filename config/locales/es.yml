@@ -47,7 +47,9 @@ es:
     country: 'Colima, México.'
 
   banner:
-    title: 'Finden'
+    title: 'Trabaja duro por tus sueños.'
+    more-information: 'Nosotros te ayudamos'
+    title-dos: 'Aquí comienza'
 
   team: 
     alert_message: '¿Estás seguro?'
