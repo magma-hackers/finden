@@ -22,9 +22,7 @@
             <td><%= technique.principal_position %></td>
             <td><%= technique.secondary_position %></td>
             <td><%= technique.strong_foot %></td>
-            <td><%= link_to t('technique.show'), technique %></td>
             <td><%= link_to t('technique.edit'), edit_technique_path(technique) %></td>
-            <td><%= link_to t('technique.destroy'), technique, method: :delete, data: { confirm: t('technique.alert_message') } %></td>
           </tr>
         <% end %>
       </tbody>

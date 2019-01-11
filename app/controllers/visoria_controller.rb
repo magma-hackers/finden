@@ -18,10 +18,18 @@ class VisoriaController < ApplicationController
   # GET /visoria/new
   def new
     @visorium = Visorium.new
+    @search_club =  User.find(current_user.id).information_personal
+    
+    if @search_club == nil 
+      redirect_to new_information_personal_path
+    else
+      @search_club = u.information_personal.club
+    end
   end
 
   # GET /visoria/1/edit
   def edit
+    @search_club = User.find(current_user.id).information_personal.club
   end
 
   def assist
@@ -61,7 +69,8 @@ class VisoriaController < ApplicationController
   # POST /visoria
   # POST /visoria.json
   def create
-    @visorium = Visorium.new(visorium_params)
+    @search_club = User.find(current_user.id).information_personal.club
+    @visorium = Visorium.new(visorium_params.merge(user_id: current_user.id, club: @search_club))
 
     respond_to do |format|
       if @visorium.save

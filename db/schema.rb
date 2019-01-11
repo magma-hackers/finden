@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_10_063743) do
+ActiveRecord::Schema.define(version: 2019_01_11_023711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 2019_01_10_063743) do
     t.string "nui"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_contractuals_on_user_id"
   end
 
   create_table "information_personals", force: :cascade do |t|
@@ -65,6 +67,8 @@ ActiveRecord::Schema.define(version: 2019_01_10_063743) do
     t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_teams_on_user_id"
   end
 
   create_table "techniques", force: :cascade do |t|
@@ -73,6 +77,8 @@ ActiveRecord::Schema.define(version: 2019_01_10_063743) do
     t.string "strong_foot"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_techniques_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -107,6 +113,8 @@ ActiveRecord::Schema.define(version: 2019_01_10_063743) do
     t.string "club"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_viewers_on_user_id"
   end
 
   create_table "visoria", force: :cascade do |t|
@@ -118,7 +126,14 @@ ActiveRecord::Schema.define(version: 2019_01_10_063743) do
     t.text "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_visoria_on_user_id"
   end
 
+  add_foreign_key "contractuals", "users"
   add_foreign_key "information_personals", "users"
+  add_foreign_key "teams", "users"
+  add_foreign_key "techniques", "users"
+  add_foreign_key "viewers", "users"
+  add_foreign_key "visoria", "users"
 end

@@ -6,17 +6,24 @@ class TeamsController < ApplicationController
   # GET /teams
   # GET /teams.json
   def index
-    @teams = Team.all
+    @teams = Team.where(user_id: current_user.id)
   end
 
   # GET /teams/1
   # GET /teams/1.json
   def show
+    redirect_to teams_path
   end
 
   # GET /teams/new
   def new
-    @team = Team.new
+    @user_exist = Team.find_by(user_id: current_user.id)
+
+    if !@user_exist
+      @team = Team.new
+    else
+      redirect_to teams_path
+    end
   end
 
   # GET /teams/1/edit
@@ -26,8 +33,7 @@ class TeamsController < ApplicationController
   # POST /teams
   # POST /teams.json
   def create
-    @team = Team.new(team_params)
-
+    @team = Team.new(team_params.merge(user_id: current_user.id))    
     respond_to do |format|
       if @team.save
         format.html { redirect_to @team, notice: t('team.team_created') }

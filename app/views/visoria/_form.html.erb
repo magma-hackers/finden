@@ -4,9 +4,9 @@
       <h2><%= pluralize(visorium.errors.count, 'errores') %><%= t('visoria.forbidden_message') %></h2>
 
       <ul>
-      <% visorium.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% visorium.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -27,8 +27,8 @@
   </div>
 
   <div class='field'>
-    <%= form.label t('visoria.club') %>
-    <%= form.text_area :club %>
+    <%= form.label 'Club' %><br/>
+    <%= form.label @search_club %>
   </div>
 
   <div class='field'>

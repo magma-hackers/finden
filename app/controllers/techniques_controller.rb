@@ -6,17 +6,24 @@ class TechniquesController < ApplicationController
   # GET /techniques
   # GET /techniques.json
   def index
-    @techniques = Technique.all
+    @techniques = Technique.where(user_id: current_user.id)
   end
 
   # GET /techniques/1
   # GET /techniques/1.json
   def show
+    redirect_to techniques_path
   end
 
   # GET /techniques/new
   def new
-    @technique = Technique.new
+    @user_exist = Technique.find_by(user_id: current_user.id)
+
+    if !@user_exist
+      @technique = Technique.new
+    else
+      redirect_to techniques_path
+    end
   end
 
   # GET /techniques/1/edit
@@ -26,7 +33,7 @@ class TechniquesController < ApplicationController
   # POST /techniques
   # POST /techniques.json
   def create
-    @technique = Technique.new(technique_params)
+    @technique = Technique.new(technique_params.merge(user_id: current_user.id))
 
     respond_to do |format|
       if @technique.save

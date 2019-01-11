@@ -6,17 +6,24 @@ class ContractualsController < ApplicationController
   # GET /contractuals
   # GET /contractuals.json
   def index
-    @contractuals = Contractual.all
+    @contractuals = Contractual.where(user_id: current_user.id)    
   end
 
   # GET /contractuals/1
   # GET /contractuals/1.json
   def show
+    redirect_to contractuals_path
   end
 
   # GET /contractuals/new
   def new
-    @contractual = Contractual.new
+    @user_exist = Contractual.find_by(user_id: current_user.id)
+
+    if !@user_exist
+      @contractual = Contractual.new
+    else
+      redirect_to contractual_path
+    end
   end
 
   # GET /contractuals/1/edit
@@ -26,7 +33,7 @@ class ContractualsController < ApplicationController
   # POST /contractuals
   # POST /contractuals.json
   def create
-    @contractual = Contractual.new(contractual_params)
+    @contractual = Contractual.new(contractual_params.merge(user_id: current_user.id))
 
     respond_to do |format|
       if @contractual.save

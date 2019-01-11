@@ -4,27 +4,27 @@
   <% if user_signed_in? %>
     <% if can? :crud, Visorium %>
       <li>
-        <%= link_to t('visoria.visorium'), new_visorium_url %>
+        <%= link_to t('visoria.visorium'), visoria_path %>
       </li>
     <% end %>
     <% if can? :crud, Viewer %>
       <li>
-        <%= link_to t('visor.viewers'), new_viewer_url %>
+        <%= link_to t('visor.viewers'), viewers_path %>
       </li>
     <% end %>
     <% if can? :crud, Technique %>
       <li>
-        <%= link_to t('technique.technique'), new_technique_path %>
+        <%= link_to t('technique.technique'), techniques_path %>
       </li>
     <% end %>
     <% if can? :crud, Contractual %>
       <li>
-        <%= link_to t('contractual.contractual'), new_contractual_path %>
+        <%= link_to t('contractual.contractual'), contractuals_path %>
       </li>
     <% end %>
     <% if can? :crud, Team %>
       <li>
-      <%= link_to t('team.teams'), new_team_path %>
+      <%= link_to t('team.teams'), teams_path %>
       </li>
     <% end %>
   <% end %>
