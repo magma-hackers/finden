@@ -4,12 +4,15 @@
 
 @font-face {
   font-family: "Rubik";
-  src: url('https://fonts.google.com/specimen/Rubik');
   font-size: 30px;
+  src: url('https://fonts.google.com/specimen/Rubik');
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Rubik", sans-serif;
+  min-height: 100vh;
 }
 
 nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
@@ -30,10 +33,10 @@ nav .sidenav-trigger {
 }
 
 nav ul {
-  line-height: 0;
-  display: flex;
   align-items: center;
+  display: flex;
   height: 100%;
+  line-height: 0;
   a {
     font-size: 16px;
 
@@ -44,7 +47,7 @@ nav ul {
 }
 
 .sidenav {
-  background-color: $side-background;
+  background-color: $primary-color;
 }
 
 .sidenav li > a {
@@ -52,7 +55,7 @@ nav ul {
   font-size: 16px;
 
   &:hover {
-  color: $font-hover;
+  color: $secondary-font-color;
   }
 }
 
@@ -60,3 +63,114 @@ nav ul {
   text-align: end;
 }
 
+.wrapper-footer {
+  background-color: $primary-color;
+  flex: 1;
+  position: relative;
+}
+
+.footer {
+  bottom: 0;
+  color: white;
+  height: auto;
+  position: absolute;
+  width: 100%;
+}
+
+.row-information {
+  margin-bottom: 0px;
+}
+
+.ul-footer .subtitle > a {
+  color: $primary-font-color;
+  
+  &:hover {
+    border-bottom: 1px solid $secondary-font-color;
+  }
+}
+
+.title-footer {
+  margin-bottom: 10px;
+  & a {
+    color: $secondary-font-color;
+    font-size: 16px;
+    
+  }
+}
+
+.icons {
+  align-items: baseline;
+  display: flex;
+  height: 30px;
+  margin-right: 50px;
+  width: 30px;
+  @media(max-width: 768px) {
+    margin-right: 40px
+   }
+}
+
+.image-icon {
+  margin-right: 10px;
+  width: 100%;
+  & img {
+    width: 30px;
+    @media(max-width: 768px) {
+      width: 20px;
+     }
+  }
+  @media(max-width: 768px) {
+    width: 20px;
+   }
+
+}
+
+.column-footer {
+  margin-top: 20px;
+}
+
+.social-icons {
+  @media(max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+.container-icons {
+  align-items: flex-end;
+  display: flex;
+  height: 130px;
+  justify-content: flex-end;
+
+    @media(max-width: 768px) {
+     height: auto;
+    }
+}
+
+.subtitle {
+  font-size: 13px;
+  margin-bottom: 10px;
+
+  &.no-margin {
+    margin: 0;
+  }
+}
+
+.row-copyrigths {
+  margin: 0;
+}
+
+.copyrights {
+  text-align: center;
+  & a {
+    color: $secondary-font-color;
+  }
+}
+
+.row .social-icons.col.s3 {
+   
+  @media(max-width: 768px) {
+    margin-left: 6px;
+    margin-top: 0;
+  }
+}
