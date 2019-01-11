@@ -33,5 +33,6 @@ module ApiFinden
     end
     config.assets.fonts = true
     config.assets.paths << Rails.root.join('/app/assets/fonts')
+    config.autoload_paths += %W(#{config.root}/app/pdf)
   end
 end
