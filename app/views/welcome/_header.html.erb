@@ -2,31 +2,31 @@
   <li><%= link_to t('header.edit_profile'), edit_user_registration_path, class: 'navbar-link' %> |</li>
   <li class="divider"></li>
   <% if user_signed_in? %>
-        <% if can? :crud, Visorium %>
-          <li>
-            <%= link_to t('visoria.visorium'), new_visorium_url %>
-          </li>
-        <% end %>
-        <% if can? :crud, Viewer %>
-          <li>
-            <%= link_to t('visor.viewers'), new_viewer_url %>
-          </li>
-        <% end %>
-        <% if can? :crud, Technique %>
-          <li>
-            <%= link_to t('technique.technique'), new_technique_path %>
-          </li>
-        <% end %>
-        <% if can? :crud, Contractual %>
-          <li>
-            <%= link_to t('contractual.contractual'), new_contractual_path %>
-          </li>
-        <% end %>
-        <% if can? :crud, Team %>
-          <li>
-            <%= link_to t('team.teams'), new_team_path %>
-          </li>
-        <% end %>
+    <% if can? :crud, Visorium %>
+      <li>
+        <%= link_to t('visoria.visorium'), new_visorium_url %>
+      </li>
+    <% end %>
+    <% if can? :crud, Viewer %>
+      <li>
+        <%= link_to t('visor.viewers'), new_viewer_url %>
+      </li>
+    <% end %>
+    <% if can? :crud, Technique %>
+      <li>
+        <%= link_to t('technique.technique'), new_technique_path %>
+      </li>
+    <% end %>
+    <% if can? :crud, Contractual %>
+      <li>
+        <%= link_to t('contractual.contractual'), new_contractual_path %>
+      </li>
+    <% end %>
+    <% if can? :crud, Team %>
+      <li>
+      <%= link_to t('team.teams'), new_team_path %>
+      </li>
+    <% end %>
   <% end %>
   <li class="divider"></li>
 </ul>
@@ -36,7 +36,13 @@
     <a href="#" data-target="mobile-demo"  class="sidenav-trigger"><i class="inline-icon material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">  
       <% if user_signed_in? %>
-        <% if can? :read, Visorium %>
+        <li>
+          <%= link_to t('personal_info.personal'), information_personals_path %>
+        </li>
+        <% if can? :assist, Visorium %>
+          <li>
+            <%= link_to t('visoria.my_visorium'), visorium_my_assist_path(current_user.id) %>
+          </li>
           <li>
             <%= link_to t('visoria.visorium'), visoria_path %>
           </li>

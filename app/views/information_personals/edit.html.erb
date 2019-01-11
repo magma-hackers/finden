@@ -1,0 +1,6 @@
+<h1><%= t('personal_info.edit_information') %></h1>
+
+<%= render 'form', information_personal: @information_personal %>
+
+<%= link_to t('personal_info.show'), @information_personal %> |
+<%= link_to t('personal_info.back'), information_personals_path %>

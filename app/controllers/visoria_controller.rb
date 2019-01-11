@@ -11,7 +11,8 @@ class VisoriaController < ApplicationController
 
   # GET /visoria/1
   # GET /visoria/1.json
-  def show
+  def show    
+    @registered = current_user.visoriums.exists?(params[:id])
   end
 
   # GET /visoria/new
@@ -23,6 +24,40 @@ class VisoriaController < ApplicationController
   def edit
   end
 
+  def assist
+    visorium = Visorium.find(params[:visorium_id])
+        
+    respond_to do |format|
+      if current_user.visoriums.exists?(params[:id])
+        format.html { redirect_to visorium_my_assist_path, notice: t('visoria.if_visoria_registered') }
+      else
+        if current_user.visoriums << visorium
+          format.html { redirect_to visorium_my_assist_path, notice: t('visoria.alert_successful') }
+        else
+          format.html { redirect_to visorium_my_assist_path, notice: t('visoria.alert_error') }
+        end
+      end
+    end
+  end
+
+  def my_assist
+    u = User.find_by(id: current_user.id)
+    @my_visorium = u.visoriums
+  end
+
+  def destroy_assist    
+    visorium = Visorium.find(params[:visorium_id])
+    user = visorium.users.find(current_user.id)
+    
+    respond_to do |format|
+      if visorium.users.delete(user)
+        format.html { redirect_to visorium_my_assist_path, notice: t('visoria.alert_successful') }
+      else
+        format.html { redirect_to visorium_my_assist_path, notice: t('visoria.alert_error') }
+      end
+    end
+  end
+
   # POST /visoria
   # POST /visoria.json
   def create
@@ -30,7 +65,7 @@ class VisoriaController < ApplicationController
 
     respond_to do |format|
       if @visorium.save
-        format.html { redirect_to @visorium, notice: 'Visorium was successfully created.' }
+        format.html { redirect_to @visorium, notice: t('visoria.if_visoria_registered') }
         format.json { render :show, status: :created, location: @visorium }
       else
         format.html { render :new }
@@ -44,7 +79,7 @@ class VisoriaController < ApplicationController
   def update
     respond_to do |format|
       if @visorium.update(visorium_params)
-        format.html { redirect_to @visorium, notice: 'Visorium was successfully updated.' }
+        format.html { redirect_to @visorium, notice: t('visoria.alert_update') }
         format.json { render :show, status: :ok, location: @visorium }
       else
         format.html { render :edit }
@@ -58,7 +93,7 @@ class VisoriaController < ApplicationController
   def destroy
     @visorium.destroy
     respond_to do |format|
-      format.html { redirect_to visoria_url, notice: 'Visorium was successfully destroyed.' }
+      format.html { redirect_to visoria_url, notice: t('visoria.alert_error') }
       format.json { head :no_content }
     end
   end

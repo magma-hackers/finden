@@ -1,0 +1,2 @@
+class InformationPersonal < ApplicationRecord
+end

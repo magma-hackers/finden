@@ -1,17 +1,16 @@
 <div class="slider">
   <ul class="slides">
-    <li>
+    <li class='slider-li'>
        <%= link_to image_tag('homepage.jpg') %>
       <div class="caption center-align">
-        <h3><%= t('banner.title') %></h3>
-        <h5 class="light grey-text text-lighten-3"><%= t('Make youre dream come true') %></h5>
+        <h3 class='title-banner-uno'><%= t('banner.title') %></h3>
+        <h5 class="light grey-text text-lighten-3"><%= t('banner.more-information') %></h5>
       </div>
     </li>
-    <li>
-      <img src="https://lorempixel.com/580/250/nature/2">
+    <li class='slider-li'>
+      <%= link_to image_tag('banner.jpeg') %>
       <div class="caption left-align">
-        <h3><%= t('Improve your skills') %></h3>
-        <h5 class="light grey-text text-lighten-3"><%= t('And be the best in the field.') %></h5>
+        <h2 class='title-banner-dos'><%= t('banner.title-dos') %></h2>
       </div>
     </li>
   </ul>
