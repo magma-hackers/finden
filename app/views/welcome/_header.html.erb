@@ -7,7 +7,12 @@
         <%= link_to t('visoria.visorium'), visoria_path %>
       </li>
     <% end %>
+    <% if can? :crud, InformationPersonal %>
+      <li>
+          <%= link_to t('personal_info.personal'), information_personals_path %>
+      </li>
     <% if can? :crud, Viewer %>
+      <% end %>
       <li>
         <%= link_to t('visor.viewers'), viewers_path %>
       </li>
@@ -36,9 +41,6 @@
     <a href="#" data-target="mobile-demo"  class="sidenav-trigger"><i class="inline-icon material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">  
       <% if user_signed_in? %>
-        <li>
-          <%= link_to t('personal_info.personal'), information_personals_path %>
-        </li>
         <% if can? :assist, Visorium %>
           <li>
             <%= link_to t('visoria.my_visorium'), visorium_my_assist_path(current_user.id) %>

@@ -12,6 +12,7 @@ class Ability
       can :crud, Team
       can :crud, Technique
       can :crud, Contractual
+      can :crud, InformationPersonal
       can :read, Visorium
       can :assist, Visorium
       can :destroy_assist, Visorium
