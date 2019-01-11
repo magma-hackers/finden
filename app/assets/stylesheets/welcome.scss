@@ -4,14 +4,14 @@
 
 @font-face {
   font-family: "Rubik";
-  src: url('https://fonts.google.com/specimen/Rubik');
   font-size: 30px;
+  src: url('https://fonts.google.com/specimen/Rubik');
 }
 
 body {
-  font-family: "Rubik", sans-serif;
   display: flex;
   flex-direction: column;
+  font-family: "Rubik", sans-serif;
   min-height: 100vh;
 }
 
@@ -33,10 +33,10 @@ nav .sidenav-trigger {
 }
 
 nav ul {
-  line-height: 0;
-  display: flex;
   align-items: center;
+  display: flex;
   height: 100%;
+  line-height: 0;
   a {
     font-size: 16px;
 
@@ -64,17 +64,17 @@ nav ul {
 }
 
 .wrapper-footer {
+  background-color: $primary-color;
   flex: 1;
   position: relative;
-  background-color: $primary-color;
 }
 
 .footer {
-  position: absolute;
   bottom: 0;
-  width: 100%;
-  height: auto;
   color: white;
+  height: auto;
+  position: absolute;
+  width: 100%;
 }
 
 .row-information {
@@ -92,27 +92,26 @@ nav ul {
 .title-footer {
   margin-bottom: 10px;
   & a {
-    font-size: 16px;
     color: $secondary-font-color;
+    font-size: 16px;
     
   }
 }
 
 .icons {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  margin-right: 50px;
   align-items: baseline;
-
+  display: flex;
+  height: 30px;
+  margin-right: 50px;
+  width: 30px;
   @media(max-width: 768px) {
     margin-right: 40px
    }
 }
 
 .image-icon {
-  width: 100%;
   margin-right: 10px;
+  width: 100%;
   & img {
     width: 30px;
     @media(max-width: 768px) {
@@ -125,12 +124,11 @@ nav ul {
 
 }
 
-.colmun-footer {
+.column-footer {
   margin-top: 20px;
 }
 
 .social-icons {
-
   @media(max-width: 768px) {
     display: flex;
     justify-content: center;
@@ -139,19 +137,19 @@ nav ul {
 }
 
 .container-icons {
-  display: flex;
-  justify-content: flex-end;
-  height: 130px;
   align-items: flex-end;
-  
+  display: flex;
+  height: 130px;
+  justify-content: flex-end;
+
     @media(max-width: 768px) {
      height: auto;
     }
 }
 
 .subtitle {
-  margin-bottom: 10px;
   font-size: 13px;
+  margin-bottom: 10px;
 
   &.no-margin {
     margin: 0;
@@ -172,7 +170,7 @@ nav ul {
 .row .social-icons.col.s3 {
    
   @media(max-width: 768px) {
-    margin-top: 0;
     margin-left: 6px;
+    margin-top: 0;
   }
 }
