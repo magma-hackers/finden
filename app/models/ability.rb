@@ -27,6 +27,7 @@ class Ability
       alias_action :create, :read, :update, :delete, to: :crud
       can :crud, Visorium
       can :crud, Viewer
+      can :inscription_list, Visorium
       cannot :assist, Visorium
       cannot :destroy_assist, VisoriaController
       cannot :my_assist, VisoriaController

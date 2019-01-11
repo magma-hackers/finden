@@ -13,6 +13,16 @@ class VisoriaController < ApplicationController
   # GET /visoria/1.json
   def show    
     @registered = current_user.visoriums.exists?(params[:id])
+    @chek_information_personal = InformationPersonal.find_by(user_id: current_user.id)
+    
+    respond_to do |format|
+      if @chek_information_personal.nil?
+        format.html { redirect_to new_information_personal_path, alert: 'Debes registrar la información básica antes de inscribirte a la visoria' }
+      else 
+        return
+      end
+    end
+
   end
 
   # GET /visoria/new
@@ -62,6 +72,19 @@ class VisoriaController < ApplicationController
         format.html { redirect_to visorium_my_assist_path, notice: t('visoria.alert_successful') }
       else
         format.html { redirect_to visorium_my_assist_path, notice: t('visoria.alert_error') }
+      end
+    end
+  end
+
+  def inscription_list
+    v = Visorium.find(params[:visorium_id])
+    @list_assist = v.users
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = InscriptionList.new(@list_assist)
+        send_data pdf.render, filename: 'Invoice', type: 'application/pdf', disposition: 'inline'
       end
     end
   end

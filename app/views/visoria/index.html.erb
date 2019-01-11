@@ -3,49 +3,51 @@
     <div class='col s12 m6 l12 '> 
       <% if current_user.role != 'player' %>
         <h1><%= t('visoria.visorium') %></h1>
-      <table>
-        <thead>
-          <tr>
-            <th><%= t('visoria.date') %></th>
-            <th><%= t('visoria.place') %></th>
-            <th><%= t('visoria.schedule') %></th>
-            <th><%= t('visoria.club') %></th>
-            <th><%= t('visoria.description') %></th>
-            <th><%= t('visoria.category') %></th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @visoria.each do |visorium| %>
+        <table>
+          <thead>
             <tr>
-              <td><%= visorium.date %></td>
-              <td><%= visorium.place %></td>
-              <td><%= visorium.schedule %></td>
-              <td><%= visorium.club %></td>
-              <td><%= visorium.description %></td>
-              <td><%= visorium.category %></td>
-              <% if can? :read, Visorium %>
-                <td><%= link_to t('visoria.show'), visorium %></td>
-              <% end %>
-              <% if can? :crud, Visorium %>
-                <td><%= link_to t('visoria.edit'), edit_visorium_path(visorium) %></td>
-              <% end %>
-              <% if can? :crud, Visorium %>
-                <td><%= link_to t('visoria.destroy'), visorium, method: :delete, data: { confirm:  t('visoria.alert_message') } %></td>
-              <% end %>
+              <th><%= t('visoria.date') %></th>
+              <th><%= t('visoria.place') %></th>
+              <th><%= t('visoria.schedule') %></th>
+              <th><%= t('visoria.club') %></th>
+              <th><%= t('visoria.description') %></th>
+              <th><%= t('visoria.category') %></th>
+              <th><%= 'Inscripciones' %></th>
+              <th colspan="3"></th>
             </tr>
-          <% end %>
-        </tbody>
-      </table>
+          </thead>
 
-      <br>
-      <% if can? :crud, Visorium %>
-        <%= link_to t('visoria.button_new'), new_visorium_path, { class: 'btn' } %>
-      <% end %>
+          <tbody>
+            <% @visoria.each do |visorium| %>
+              <tr>
+                <td><%= visorium.date %></td>
+                <td><%= visorium.place %></td>
+                <td><%= visorium.schedule %></td>
+                <td><%= visorium.club %></td>
+                <td><%= visorium.description %></td>
+                <td><%= visorium.category %></td>
+                <td><%= link_to 'Lista', visorium_inscription_list_path(visorium.id) %></td>
+                <% if can? :read, Visorium %>
+                  <td><%= link_to t('visoria.show'), visorium %></td>
+                <% end %>
+                <% if can? :crud, Visorium %>
+                  <td><%= link_to t('visoria.edit'), edit_visorium_path(visorium) %></td>
+                <% end %>
+                <% if can? :crud, Visorium %>
+                  <td><%= link_to t('visoria.destroy'), visorium, method: :delete, data: { confirm:  t('visoria.alert_message') } %></td>
+                <% end %>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <br>
+        <% if can? :crud, Visorium %>
+          <%= link_to t('visoria.button_new'), new_visorium_path, { class: 'btn' } %>
+        <% end %>
 
       <% else %>
-       <h1><%= t('visoria.next_visorium') %></h1>
+        <h1><%= t('visoria.next_visorium') %></h1>
         <% @visoria.each do |visorium| %>
           <ul class="collection">
             <li class="collection-item avatar">
@@ -74,7 +76,6 @@
           </ul>
           <% end %>
       <% end %>
-      
     </div>
   </div>
 </div>
