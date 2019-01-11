@@ -1,6 +1,12 @@
-<h1><%= t('personal_info.edit_information') %></h1>
+<div class='container'>
+    <div class='row'>
+        <div class='col s12 m6 l12 '> 
+            <h1><%= t('personal_info.edit_information') %></h1>
 
-<%= render 'form', information_personal: @information_personal %>
+            <%= render 'form', information_personal: @information_personal %>
 
-<%= link_to t('personal_info.show'), @information_personal %> |
-<%= link_to t('personal_info.back'), information_personals_path %>
+            <%= link_to t('personal_info.show'), @information_personal %> |
+            <%= link_to t('personal_info.back'), information_personals_path %>
+      </div>
+    </div>
+</div>

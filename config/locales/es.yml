@@ -171,7 +171,7 @@ es:
     forbidden_message: 'Los siguientes campos no pueden estar vacios: '
     gender: 'Genero'
     height: 'Estatura'
-    male: 'Mujer'
+    female: 'Mujer'
     man: 'Hombre'
     name: 'Nombre'
     new: 'Nuevo'

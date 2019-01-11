@@ -1,43 +1,49 @@
-<p id="notice"><%= notice %></p>
+<div class='container'>
+  <div class='row'>
+    <div class='col s12 m6 l12 '> 
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t('personal_info.name') %></strong>
-  <%= @information_personal.name %>
-</p>
+      <p>
+        <strong><%= t('personal_info.name') %></strong>
+        <%= @information_personal.name %>
+      </p>
 
-<% if current_user.role == 'player' %>
-  <p>
-    <strong><%= t('personal_info.birth_place') %></strong>
-    <%= @information_personal.birth_place %>
-  </p>
+      <% if current_user.role == 'player' %>
+        <p>
+          <strong><%= t('personal_info.birth_place') %></strong>
+          <%= @information_personal.birth_place %>
+        </p>
 
-  <p>
-    <strong><%= t('personal_info.born_date') %></strong>
-    <%= @information_personal.born_date %>
-  </p>
+        <p>
+          <strong><%= t('personal_info.born_date') %></strong>
+          <%= @information_personal.born_date %>
+        </p>
 
-  <p>
-    <strong><%= t('personal_info.weight') %></strong>
-    <%= @information_personal.weight %>
-  </p>
+        <p>
+          <strong><%= t('personal_info.weight') %></strong>
+          <%= @information_personal.weight %>
+        </p>
 
-  <p>
-    <strong><%= t('personal_info.height') %></strong>
-    <%= @information_personal.height %>
-  </p>
-<% end %>
+        <p>
+          <strong><%= t('personal_info.height') %></strong>
+          <%= @information_personal.height %>
+        </p>
+      <% end %>
 
-<p>
-  <strong><%= t('personal_info.gender') %></strong>
-  <%= @information_personal.gender %>
-</p>
+      <p>
+        <strong><%= t('personal_info.gender') %></strong>
+        <%= @information_personal.gender %>
+      </p>
 
-<% if current_user.role == 'club' %>
-  <p>
-    <strong>Club:</strong>
-    <%= @information_personal.club %>
-  </p>
-<% end %>
+      <% if current_user.role == 'club' %>
+        <p>
+          <strong>Club:</strong>
+          <%= @information_personal.club %>
+        </p>
+      <% end %>
 
-<%= link_to t('personal_info.edit'), edit_information_personal_path(@information_personal) %> |
-<%= link_to t('personal_info.back'), information_personals_path %>
+      <%= link_to t('personal_info.edit'), edit_information_personal_path(@information_personal) %> |
+      <%= link_to t('personal_info.back'), information_personals_path %>
+       </div>
+  </div>
+</div>   
