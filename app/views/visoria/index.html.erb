@@ -1,8 +1,6 @@
 <div class='container'>
   <div class='row'>
     <div class='col s12 m6 l12 '> 
-      <p id="notice"><%= notice %></p>
-
       <% if current_user.role != 'player' %>
         <h1><%= t('visoria.visorium') %></h1>
       <table>

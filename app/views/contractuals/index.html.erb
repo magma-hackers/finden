@@ -1,9 +1,6 @@
 <div class='container'>
   <div class='row'>
     <div class='col s12 m6 l12 '> 
-
-    <p id="notice"><%= notice %></p>
-
     <h1><%= t('contractual.contractual') %></h1>
 
     <table>
@@ -22,18 +19,16 @@
             <td><%= contractual.player_type %></td>
             <td><%= contractual.agent %></td>
             <td><%= contractual.nui %></td>
-            <td><%= link_to t('contractual.show'), contractual %></td>
             <td><%= link_to t('contractual.edit'), edit_contractual_path(contractual) %></td>
-            <td><%= link_to t('contractual.button_destroy'), contractual, method: :delete, data: { confirm: t('contractual.alert_message') } %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
 
     <br>
-
-    <%= link_to t('contractual.new_contractual'), new_contractual_path, { class: 'btn' }  %>
-
+    <% if @contractuals.blank? %>
+      <%= link_to t('contractual.new_contractual'), new_contractual_path, { class: 'btn' }  %>
+    <% end %>
     </div>
   </div>
 </div>

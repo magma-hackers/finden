@@ -5,6 +5,11 @@ class InformationPersonalsController < ApplicationController
   # GET /information_personals.json
   def index
     @information_personals = InformationPersonal.find_by(user_id: current_user.id)
+    
+    if !@information_personals
+      redirect_to new_information_personal_path
+    end
+
   end
 
   # GET /information_personals/1

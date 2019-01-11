@@ -6,7 +6,7 @@ class ViewersController < ApplicationController
   # GET /viewers
   # GET /viewers.json
   def index
-    @viewers = Viewer.all
+    @viewers = Viewer.where(user_id: current_user.id)
   end
 
   # GET /viewers/1
@@ -17,20 +17,29 @@ class ViewersController < ApplicationController
   # GET /viewers/new
   def new
     @viewer = Viewer.new
+    @search_club =  User.find(current_user.id).information_personal
+    
+    if @search_club == nil 
+      redirect_to new_information_personal_path
+    else
+      @search_club = User.find(current_user.id).information_personal.club
+    end
   end
 
   # GET /viewers/1/edit
   def edit
+    @search_club = User.find(current_user.id).information_personal.club
   end
 
   # POST /viewers
   # POST /viewers.json
   def create
-    @viewer = Viewer.new(viewer_params)
+    @search_club = User.find(current_user.id).information_personal.club
+    @viewer = Viewer.new(viewer_params.merge(user_id: current_user.id, club: @search_club))
 
     respond_to do |format|
       if @viewer.save
-        format.html { redirect_to @viewer, notice: t('visor.alert_succesful') }
+        format.html { redirect_to viewers_path, notice: t('visor.alert_succesful') }
         format.json { render :show, status: :created, location: @viewer }
       else
         format.html { render :new }

@@ -8,7 +8,7 @@ class Ability
     end
     
     if user.role == 'player'
-      alias_action :create, :read, :update, :delete, to: :crud
+      alias_action :create, :read, :update, :destroy, to: :crud
       can :crud, Team
       can :crud, Technique
       can :crud, Contractual
