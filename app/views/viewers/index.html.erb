@@ -25,7 +25,9 @@
               <td><%= viewer.telephone %></td>
               <td><%= viewer.club %></td>
               <td><%= link_to t('visor.edit'), edit_viewer_path(viewer) %></td>
+              <% if can? :destroy, viewer %>
               <td><%= link_to t('visor.destroy'), viewer, method: :delete, data: { confirm: t('visor.alert_sure') } %></td>
+              <% end %>
             </tr>
           <% end %>
         </tbody>

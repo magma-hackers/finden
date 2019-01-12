@@ -8,7 +8,7 @@ class Ability
     end
     
     if user.role == 'player'
-      alias_action :create, :read, :update, :destroy, to: :crud
+      alias_action :create, :read, :update, :delete, to: :crud
       can :crud, Team
       can :crud, Technique
       can :crud, Contractual
@@ -20,7 +20,6 @@ class Ability
       cannot :index, VisoriaController
       cannot :new, VisoriaController
       cannot :update, VisoriaController
-      cannot :destroy, VisoriaController
       cannot :create, VisoriaController
     end
     
@@ -28,6 +27,7 @@ class Ability
       alias_action :create, :read, :update, :delete, to: :crud
       can :crud, Visorium
       can :crud, Viewer
+      can :crud, InformationPersonal
       cannot :assist, Visorium
       cannot :destroy_assist, VisoriaController
       cannot :my_assist, VisoriaController

@@ -1,9 +1,6 @@
 <div class='container'>
   <div class='row'>
     <div class='col s12 m6 l12 '> 
-
-    <p id="notice"><%= notice %></p>
-
     <h1><%= t('technique.technique') %></h1>
 
     <table>
@@ -23,6 +20,9 @@
             <td><%= technique.secondary_position %></td>
             <td><%= technique.strong_foot %></td>
             <td><%= link_to t('technique.edit'), edit_technique_path(technique) %></td>
+            <% if can? :destroy, technique %>
+              <td><%= link_to t('technique.destroy'), technique, method: :delete, data: { confirm: t('technique.alert_message') } %></td>
+            <% end %>
           </tr>
         <% end %>
       </tbody>

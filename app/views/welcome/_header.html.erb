@@ -11,8 +11,8 @@
       <li>
           <%= link_to t('personal_info.personal'), information_personals_path %>
       </li>
-    <% if can? :crud, Viewer %>
       <% end %>
+      <% if can? :crud, Viewer %>
       <li>
         <%= link_to t('visor.viewers'), viewers_path %>
       </li>
