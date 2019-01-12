@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     get '/assist', to: 'visoria#assist', as: :assist
     get '/my_assist', to: 'visoria#my_assist', as: :my_assist
     get '/destroy_assist', to: 'visoria#destroy_assist', as: :destroy_assist
+    get '/inscription_list', to: 'visoria#inscription_list', as: :inscription_list
+    get '/print_list_pdf', to: 'visoria#print_list_pdf', as: :print_list_pdf
   end
 
   get 'pages/contact'
