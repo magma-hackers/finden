@@ -4,8 +4,8 @@
   }
 
   .btn-style {
-    width: 100%;
     background-color: $secondary-font-color;
+    width: 100%;
     &:hover {
       background-color: $secondary-font-color-hover;
     }
@@ -21,14 +21,14 @@
   
   .col-sign-up {
     width: 450px;
-    @media(max-width: 768px) {
+    @include breakpoint( mobile) {
       margin: 0;
      }
   }
 
   .col-forgot-pass {
     width: 450px;
-    @media(max-width: 768px) {
+    @include breakpoint(mobile) {
       margin: 0;
       width: 100%;
      }
@@ -50,11 +50,11 @@
   }
   
   .c-contener {
-    padding: 15px 20px 15px 20px;
+    padding: 15px 20px;
   }
 
-  h2 {
-    margin: 0;
+  .sign-title {
     color: $space-grey;
+    margin: 0;
   }
 }
