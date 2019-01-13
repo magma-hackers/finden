@@ -51,6 +51,16 @@ en:
     title: 'Work hard for your dream.'
     more-information: 'We help you to link.'
     title-dos: 'Here begins'
+  
+  sign_up:
+    role: 'Role'
+    account: "Alredy have an account? "
+  
+  sign_in:
+    account: "Don't have an account? "
+  
+  new:
+    send_me_reset_password_instructions: "Reset my password"
 
   team: 
     alert_message: 'Are you sure?'

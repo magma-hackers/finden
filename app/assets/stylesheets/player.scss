@@ -1,0 +1,60 @@
+.container-sign-up{
+  .div-btn {
+    text-align: center;
+  }
+
+  .btn-style {
+    width: 100%;
+    background-color: $secondary-font-color;
+    &:hover {
+      background-color: $secondary-font-color-hover;
+    }
+  }
+
+  .link-forgot-password {
+    color: $white;
+  }
+  
+  .link-sign-in {
+    margin-top: 15px;
+  }
+  
+  .col-sign-up {
+    width: 450px;
+    @media(max-width: 768px) {
+      margin: 0;
+     }
+  }
+
+  .col-forgot-pass {
+    width: 450px;
+    @media(max-width: 768px) {
+      margin: 0;
+      width: 100%;
+     }
+  }
+  
+  .row-sign-up {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .divider {
+    margin-top: 15px;
+  }
+  
+  .btn-fbook {
+    background-color: $facebook-btn;
+    width: 100%;
+  }
+  
+  .c-contener {
+    padding: 15px 20px 15px 20px;
+  }
+
+  h2 {
+    margin: 0;
+    color: $space-grey;
+  }
+}

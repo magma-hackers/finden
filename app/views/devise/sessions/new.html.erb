@@ -1,8 +1,8 @@
-<div class="container">
-  <div class="row">
-    <div class="col s6 offset-s3">
+<div class="container container-sign-up">
+  <div class="row row-sign-up">
+    <div class="s12 m6 col-sign-up">
       <div class="card">
-        <div class="card-content">
+        <div class="c-contener">
           <span class="card-title"><h2><%= t('.sign_in') %></h2></span>
 
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -23,14 +23,15 @@
             </label>
           <% end -%>
 
-          <div class="actions">
-            <%= f.button class: "waves-effect waves-light btn ", type: :submit do %>
+          <div class="actions div-btn">
+            <%= f.button class: "waves-effect waves-light btn btn-style", type: :submit do %>
               <%= t('.sign_in') %>
             <%end%>
           </div>
           <% end %>
-
-          <%= render "devise/shared/links" %>
+          <div class='link-sign-in'>
+            <%= render "devise/shared/links" %>
+          </div>
         </div>
       </div>
     </div>
