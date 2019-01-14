@@ -84,7 +84,7 @@ es-MX:
         new_password: Contraseña nueva
       new:
         forgot_your_password: '¿Ha olvidado su contraseña?'
-        send_me_reset_password_instructions: Enviarme instrucciones para restablecer la contraseña
+        send_me_reset_password_instructions: 'Restablecer contraseña'
       no_token: No puedes acceder a esta página si no es a través de un enlace para restablecer tu contraseña. Si has llegado hasta aquí desde el correo para restablecer tu contraseña, por favor asegúrate de que la URL introducida está completa.
       send_instructions: En unos minutos recibirás un correo con instrucciones sobre cómo restablecer tu contraseña.
       send_paranoid_instructions: Si tu correo existe en nuestra base de datos, recibirás en tu bandeja de entrada un correo con instrucciones sobre cómo restablecer tu contraseña.
