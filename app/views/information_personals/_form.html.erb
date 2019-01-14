@@ -39,8 +39,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :gender %>
-    <%= form.select :gender, options_for_select([[t('personal_info.male'), t('personal_info.male')], [t('personal_info.man'), t('personal_info.man')]]), {}, class: 'browser-default' %>
+    <%= form.label t('personal_info.gender') %>
+    <%= form.select :gender, options_for_select([[t('personal_info.female'), t('personal_info.female')], [t('personal_info.man'), t('personal_info.man')]]), {}, class: 'browser-default' %>
   </div>
   
   <% if current_user.role == 'club' %>

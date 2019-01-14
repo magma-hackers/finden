@@ -14,12 +14,13 @@ class ListPdf < Prawn::Document
 	def get_table_info 
 		[['name', 'Lugar de nacimiento', 'Fecha de nacimiento', 'Peso', 'Estatura', 'Genero']] + 
 		@list_assist.map do |assist| 
-			[assist.information_personal.name, 
-			 assist.information_personal.birth_place,
-			 assist.information_personal.born_date, 
-			 assist.information_personal.weight,
-			 assist.information_personal.height,
-			 assist.information_personal.gender] 
+			personal_info = assist.information_personals
+			[personal_info[0].name, 
+			 personal_info[0].birth_place,
+			 personal_info[0].born_date, 
+			 personal_info[0].weight,
+			 personal_info[0].height,
+			 personal_info[0].gender] 
 		end
 	end
 end

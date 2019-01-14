@@ -17,25 +17,26 @@ class ViewersController < ApplicationController
   # GET /viewers/new
   def new
     @viewer = Viewer.new
-    @search_club =  User.find(current_user.id).information_personal
+    @search_club =  User.find(current_user.id).information_personals
     
     if @search_club == nil 
       redirect_to new_information_personal_path
     else
-      @search_club = User.find(current_user.id).information_personal.club
+      @club = @search_club[0].club
     end
   end
 
   # GET /viewers/1/edit
   def edit
-    @search_club = User.find(current_user.id).information_personal.club
+    @findRelation = User.find(current_user.id).information_personals
+    @club = @findRelation[0].club
   end
 
   # POST /viewers
   # POST /viewers.json
-  def create
-    @search_club = User.find(current_user.id).information_personal.club
-    @viewer = Viewer.new(viewer_params.merge(user_id: current_user.id, club: @search_club))
+  def create   
+    @search_club = User.find(current_user.id).information_personals
+    @viewer = Viewer.new(viewer_params.merge(user_id: current_user.id, club: @search_club[0].club))
 
     respond_to do |format|
       if @viewer.save
@@ -64,7 +65,7 @@ class ViewersController < ApplicationController
 
   # DELETE /viewers/1
   # DELETE /viewers/1.json
-  def destroy
+  def destroy    
     @viewer.destroy
     respond_to do |format|
       format.html { redirect_to viewers_url, notice: t('visor.alert_delete') }
