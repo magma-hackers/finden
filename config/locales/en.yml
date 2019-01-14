@@ -146,6 +146,8 @@ en:
     show: 'Show'
     title_edit: 'Editing Visorium'
     visorium: 'Visorium'
+    list: 'List'
+    inscription: 'Inscription'
 
   visor: 
     alert_delete: 'Viewer was successfully destroyed.'
@@ -191,6 +193,7 @@ en:
     show: 'Show'
     update_message: 'La información personal fue actualizada correctamente.'
     weight: 'Weight'
+    represent: 'Club responsable'
 
   helper: 
     without_image: 'Whitout image'
