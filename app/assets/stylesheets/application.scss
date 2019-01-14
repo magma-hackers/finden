@@ -1,5 +1,7 @@
+ @import "abstracts/mixins";
  @import '../settings/colors';
  @import "materialize";
  @import "welcome";
  @import "pages.scss";
  @import "toastr";
+ @import "player";

@@ -1,24 +1,23 @@
-<div class="container">
-  <div class="row">
-    <div class="col s6 offset-s3">
+<div class="container container-sign-up">
+  <div class="row row-sign-up">
+    <div class="s12 m6 col-sign-up">
       <div class="card">
-        <div class="card-content">
-          <span class="card-title"><h2><%= t('.sign_up') %></h2></span>
+        <div class="c-contener">
+          <span class="card-title"><h2 class='sign-title'><%= t('.sign_up') %></h2></span>
 
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= devise_error_messages! %>
 
             <div class="input-field">
               <%= f.label :email %><br />
-              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" , require: true %>
             </div>
 
             <div class="input-field">
               <%= f.label :password %>
+              <%= f.password_field :password, autocomplete: "new-password" %>
               <% if @minimum_password_length %>
               <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em>
               <% end %><br />
-              <%= f.password_field :password, autocomplete: "new-password" %>
             </div>
 
             <div class="input-field">
@@ -30,14 +29,16 @@
               <%= f.label :role %><br />
               <%= f.select :role, options_for_select([['Club', 'club'], ['Player', 'player']]), {}, class: 'browser-default' %>
             </div>
-            <div class="actions">
-              <%= f.button class: "waves-effect waves-light btn", type: :submit do %>
-                <%= t('.sign_up') %>
+            <div class="actions div-btn">
+              <%= f.button class: "waves-effect waves-light btn btn-style", type: :submit do %>
+              <%= t('.sign_up') %>
               <%end%>
             </div>
           <% end %>
-
-          <%= render "devise/shared/links" %>
+          <div class='link-sign-in'>
+            <i><%= t('sign_up.account') %></i>
+            <i><%= render "devise/shared/links" %></i>
+          </div>
         </div>
       </div>
     </div>
