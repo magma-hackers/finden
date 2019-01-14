@@ -9,7 +9,6 @@ class InformationPersonalsController < ApplicationController
     if !@information_personals
       redirect_to new_information_personal_path
     end
-
   end
 
   # GET /information_personals/1
@@ -21,7 +20,7 @@ class InformationPersonalsController < ApplicationController
   # GET /information_personals/new
   def new
     @user_exist = InformationPersonal.find_by(user_id: current_user.id)
-
+    
     if !@user_exist
       @information_personal = InformationPersonal.new
     else
@@ -36,8 +35,8 @@ class InformationPersonalsController < ApplicationController
   # POST /information_personals
   # POST /information_personals.json
   def create
-    @information_personal = InformationPersonal.new(information_personal_params.merge(user_id: current_user.id))
-
+    @information_personal = InformationPersonal.new(information_personal_params.merge(user_id: current_user.id)) 
+          
     respond_to do |format|
       if @information_personal.save
         format.html { redirect_to @information_personal, notice: t('personal_info.create_message') }

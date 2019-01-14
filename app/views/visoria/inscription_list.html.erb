@@ -2,25 +2,26 @@
  <table>
 	<thead>
 		<tr>
-			<th><%= 'Nombre' %></th>
-			<th><%= 'Lugar de nacimiento' %></th>
-			<th><%= 'Fecha de nacimiento' %></th>
-			<th><%= 'peso' %></th>
-			<th><%= 'estatura' %></th>
-			<th><%= 'genero' %></th>
+			<th><%= t('personal_info.name') %></th>
+			<th><%= t('personal_info.birth_place') %></th>
+			<th><%= t('personal_info.born_date') %></th>
+			<th><%= t('personal_info.weight') %></th>
+			<th><%= t('personal_info.height') %></th>
+			<th><%= t('personal_info.gender') %></th>
 			<th colspan="3"></th>
 		</tr>
 	</thead>
 
 	<tbody>
-		<% @list_assist.each do |list_assist| %>
+		<% @list_assist.each do |list_assist| 
+			personal_info = list_assist.information_personals %>
 			<tr>
-				<td><%= list_assist.information_personal.name %></td>
-				<td><%= list_assist.information_personal.birth_place %></td>
-				<td><%= list_assist.information_personal.born_date %></td>
-				<td><%= list_assist.information_personal.weight %></td>
-				<td><%= list_assist.information_personal.height %></td>
-				<td><%= list_assist.information_personal.gender %></td>
+				<td><%= personal_info[0].name %></td>
+				<td><%= personal_info[0].birth_place %></td>
+				<td><%= personal_info[0].born_date %></td>
+				<td><%= personal_info[0].weight %></td>
+				<td><%= personal_info[0].height %></td>
+				<td><%= personal_info[0].gender %></td>
 			</tr>
 		<% end %>
 	</tbody>

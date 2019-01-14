@@ -28,18 +28,19 @@ class VisoriaController < ApplicationController
   # GET /visoria/new
   def new
     @visorium = Visorium.new
-    @search_club =  User.find(current_user.id).information_personal
-    
-    if @search_club == nil 
+    @findRelation = User.find(current_user.id).information_personals
+   
+    if @findRelation.blank? 
       redirect_to new_information_personal_path
-    else
-      @search_club = u.information_personal.club
+    else       
+      @search_club =  @findRelation[0].club
     end
   end
 
   # GET /visoria/1/edit
   def edit
-    @search_club = User.find(current_user.id).information_personal.club
+    @findRelation = User.find(current_user.id).information_personals
+    @search_club = @findRelation[0].club
   end
 
   def assist
@@ -77,8 +78,8 @@ class VisoriaController < ApplicationController
   end
 
   def inscription_list
-    v = Visorium.find(params[:visorium_id])
-    @list_assist = v.users  
+    v = Visorium.find(params[:visorium_id])   
+    @list_assist = v.users    
   end
 
   def print_list_pdf
@@ -93,8 +94,8 @@ class VisoriaController < ApplicationController
   # POST /visoria
   # POST /visoria.json
   def create
-    @search_club = User.find(current_user.id).information_personal.club
-    @visorium = Visorium.new(visorium_params.merge(user_id: current_user.id, club: @search_club))
+    @search_club = User.find(current_user.id).information_personals   
+    @visorium = Visorium.new(visorium_params.merge(users_id: current_user.id, club: @search_club[0].club))
 
     respond_to do |format|
       if @visorium.save
