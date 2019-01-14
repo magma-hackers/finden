@@ -146,6 +146,9 @@ es:
     show: 'Mostrar'
     title_edit: 'Editar Visoría'
     visorium: 'Visoria'
+    list: 'Listado'
+    inscription: 'Participantes'
+
 
   visor: 
     alert_delete: 'El visor fue eliminado correctamente.'
@@ -191,6 +194,7 @@ es:
     show: 'Mostrar'
     update_message: 'Information personal was successfully updated.'
     weight: 'Peso'
+    represent: 'Representante Club'
     
   helper: 
     without_image: 'Sin imagen'

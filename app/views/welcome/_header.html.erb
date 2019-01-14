@@ -2,17 +2,19 @@
   <li><%= link_to t('header.edit_profile'), edit_user_registration_path, class: 'navbar-link' %> |</li>
   <li class="divider"></li>
   <% if user_signed_in? %>
+    <% if can? :crud, InformationPersonal %>
+      <% if current_user.role != 'club' %>
+          <li><%= link_to t('personal_info.personal'), information_personals_path %></li>
+        <% else %>
+          <li><%= link_to t('personal_info.represent'), information_personals_path %></li>
+        <% end %>
+    <% end %>
     <% if can? :crud, Visorium %>
       <li>
         <%= link_to t('visoria.visorium'), visoria_path %>
       </li>
     <% end %>
-    <% if can? :crud, InformationPersonal %>
-      <li>
-          <%= link_to t('personal_info.personal'), information_personals_path %>
-      </li>
-      <% end %>
-      <% if can? :crud, Viewer %>
+    <% if can? :crud, Viewer %>
       <li>
         <%= link_to t('visor.viewers'), viewers_path %>
       </li>
@@ -42,12 +44,8 @@
     <ul class="right hide-on-med-and-down">  
       <% if user_signed_in? %>
         <% if can? :assist, Visorium %>
-          <li>
-            <%= link_to t('visoria.my_visorium'), visorium_my_assist_path(current_user.id) %>
-          </li>
-          <li>
-            <%= link_to t('visoria.visorium'), visoria_path %>
-          </li>
+          <li><%= link_to t('visoria.visorium'), visoria_path %></li>
+          <li><%= link_to t('visoria.my_visorium'), visorium_my_assist_path(current_user.id) %></li>
         <% end %>
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><%= t('header.menu_opt')%></a></li>      
         <li><a><%= current_user.role %> <strong><%= current_user.email %></strong></li></a>
@@ -63,17 +61,56 @@
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
+  <br/>
   <div class='session-container'>
     <% if user_signed_in? %>
-      <li><%= link_to t('header.logged_user', user_email: current_user.email).html_safe %></li>
-      <li><%= link_to t('header.edit_profile'), edit_user_registration_path, class: 'navbar-link' %></li>
-      <li><%= link_to t('header.sign_out'), destroy_user_session_path, method: :delete, class: 'navbar-link' %></li>
+      <li><a><%= current_user.role %> <strong><%= current_user.email %></strong></li></a>
+      <br/>  
+      <% if can? :crud, InformationPersonal %>
+        <% if current_user.role != 'club' %>
+          <li><%= link_to t('personal_info.personal'), information_personals_path %></li>
+        <% else %>
+          <li><%= link_to t('personal_info.represent'), information_personals_path %></li>
+        <% end %>
+      <% end %>
+      <% if can? :crud, Visorium %>
+        <li>
+          <%= link_to t('visoria.visorium'), visoria_path %>
+        </li>
+      <% end %>
+      <% if can? :crud, Viewer %>
+        <li>
+          <%= link_to t('visor.viewers'), viewers_path %>
+        </li>
+      <% end %>
+      <% if can? :crud, Technique %>
+        <li>
+          <%= link_to t('technique.technique'), techniques_path %>
+        </li>
+      <% end %>
+      <% if can? :crud, Contractual %>
+        <li>
+          <%= link_to t('contractual.contractual'), contractuals_path %>
+        </li>
+      <% end %>
+      <% if can? :crud, Team %>
+        <li>
+        <%= link_to t('team.teams'), teams_path %>
+        </li>
+      <% end %>
+      <br/>
+      <% if can? :assist, Visorium %>
+        <li><%= link_to t('visoria.visorium'), visoria_path %></li>
+        <li><%= link_to t('visoria.my_visorium'), visorium_my_assist_path(current_user.id) %></li>
+      <% end %>
+      <li><%= link_to t('header.sign_out'), destroy_user_session_path, method: :delete, class: 'navbar-link'  %></li>
     <% else %>
       <li><%= link_to t('header.about_us'), pages_about_path %></li>
       <li><%= link_to t('header.faq'), pages_faq_path %></li>
       <li><%= link_to t('header.contact'), pages_contact_path %></li>
       <li><%= link_to t('header.sign_up'), new_user_registration_path, class: 'navbar-link' %></li>
       <li><%= link_to t('header.log_in'), new_user_session_path, class: 'navbar-link' %></li>
+      <li><%= link_to t('header.sign_out'), destroy_user_session_path, method: :delete, class: 'navbar-link'  %></li>
     <% end %>
   </div>
 </ul>

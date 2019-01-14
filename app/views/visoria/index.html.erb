@@ -12,7 +12,7 @@
               <th><%= t('visoria.club') %></th>
               <th><%= t('visoria.description') %></th>
               <th><%= t('visoria.category') %></th>
-              <th><%= 'Inscripciones' %></th>
+              <th><%= t('visoria.inscription') %></th>
               <th colspan="3"></th>
             </tr>
           </thead>
@@ -26,7 +26,7 @@
                 <td><%= visorium.club %></td>
                 <td><%= visorium.description %></td>
                 <td><%= visorium.category %></td>
-                <td><%= link_to 'Lista', visorium_inscription_list_path(visorium.id) %></td>
+                <td><%= link_to t('visoria.list'), visorium_inscription_list_path(visorium.id) %></td>
                 <% if can? :read, Visorium %>
                   <td><%= link_to t('visoria.show'), visorium %></td>
                 <% end %>
