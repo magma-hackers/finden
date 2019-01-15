@@ -59,9 +59,39 @@ nav ul {
   }
 }
 
-.title-banner-uno, h5{
+.title-banner-uno, .subtitle-banner-uno, h5{
   text-align: end;
 }
+
+.subtitle-banner-uno {
+  font-size: 30px;
+  margin: 0;
+}
+
+.title-banner-uno, .subtitle-banner-uno {
+  margin-right: -35px;
+  margin-bottom: 0;
+
+  @media(max-width: 768px) {
+    font-weight: 300;
+    margin-right: -35px;
+    font-size: 25px;
+   }
+}
+
+.title-banner-dos{
+  color: black;
+  margin-top: 0;
+  font-size: 48px;
+  @media(max-width: 768px) {
+    font-weight: 400;
+    font-size: 30px;
+    margin: 18px 0 0 -30px;
+    text-align: center;
+    color: black;
+   }
+}
+
 
 .wrapper-footer {
   background-color: $primary-color;
