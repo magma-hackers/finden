@@ -1,0 +1,14 @@
+.slider {
+  height: 600px !important;
+  @include breakpoint( mobile) {
+    height: 400px !important;
+  }
+.slides {
+  height: 100% !important;
+}
+  .indicators {
+    z-index: 2;
+    margin-bottom: 15px;
+  }
+}
+  
