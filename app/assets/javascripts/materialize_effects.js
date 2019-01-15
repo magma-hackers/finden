@@ -13,3 +13,9 @@ document.addEventListener('turbolinks:load', function() {
     stopPropagation: false // Stops event propagation
   });
 });
+
+document.addEventListener('turbolinks:before-visit', function() {
+  elem = document.querySelector('.sidenav');
+  instance = M.Sidenav.getInstance(elem);
+  instance.destroy()
+});
