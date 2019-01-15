@@ -1,6 +1,5 @@
 <ul id="dropdown1" class="dropdown-content">
-  <li><%= link_to t('header.edit_profile'), edit_user_registration_path, class: 'navbar-link' %> |</li>
-  <li class="divider"></li>
+  <li><%= link_to t('header.edit_profile'), edit_user_registration_path, class: 'navbar-link' %></li>
   <% if user_signed_in? %>
     <% if can? :crud, InformationPersonal %>
       <% if current_user.role != 'club' %>
