@@ -198,7 +198,7 @@ es:
     
   helper: 
     without_image: 'Sin imagen'
-    upload_picture: 'Subir imagen'
+    upload_picture: 'La imagen debe ser al menos de 512px x 512px, mantener un fondo blanco y el rostro lo mas despejado posible.'
 
   activerecord:
     errors:

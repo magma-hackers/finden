@@ -197,7 +197,7 @@ en:
 
   helper: 
     without_image: 'Whitout image'
-    upload_picture: 'Upload picture'
+    upload_picture: 'The image must be at least 512px x 512px, keep a white background and face as clear as possible.'
 
   activerecord:
     errors:
