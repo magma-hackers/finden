@@ -1,12 +1,18 @@
 <div class='container'>
-    <div class='row'>
-        <div class='col s12 m6 l12 '> 
-        <h1><%= t('visoria.new_visoria') %></h1>
-
-        <%= render 'form', visorium: @visorium %>
-
-        <%= link_to t('visoria.back') , visoria_path %>
-
-        </div>
-    </div>
+	<div class='row'>
+		<div class='col s12 m6 l12 '> 
+			<h3><%= t('visoria.new_visoria') %></h3>
+			
+					<div class="row">
+						<div class="col s12">
+							<div class="card">
+								<div class="card-content white-text">
+										<%= render 'form', visorium: @visorium %>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
